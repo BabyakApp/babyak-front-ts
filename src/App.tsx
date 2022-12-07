@@ -1,10 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Post from "./components/postBox";
+import AllPostList from "./pages/allPostList";
+import {BrowserRouter, Route} from "react-router-dom";
+import GlobalStyles from './style/GlobalStyles';
 
 function App() {
   return (
     <div className="App">
+      <GlobalStyles />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,6 +25,7 @@ function App() {
         </a>
       </header>
     </div>
+    
   );
 }
 
