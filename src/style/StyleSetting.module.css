@@ -409,14 +409,17 @@
     border-radius: 20px;
     border: solid 1px rgba(255, 146, 174, 0.5);
     background-color: white;
+    text-align: left;
 }
 .MypageProfile{
     margin: 10% 0 0 0;
     padding-left: 35%;
     background-color: white;
 }
+.MypageIcon{
+    margin:0 2% 0 4%;
+}
 .MypageInfo{
-    padding-right: 55%;
     font-family: NotoSansKRMedium;
     font-size: 12px;
     font-weight: 500;
@@ -428,6 +431,7 @@
     color: #000;
 }
 .MypageContent{
+    margin-left: 54%;
     font-family: NotoSansKRBold;
     font-size: 16px;
     font-weight: bold;
@@ -437,6 +441,11 @@
     letter-spacing: normal;
     text-align: right;
     color: #000;
+}
+.MypageTimetable{
+    margin-top: 2%;
+    width: 100%;
+    object-fit: cover;
 }
 .NoshowreportBox{
     background-color: white;

@@ -18,6 +18,7 @@ import Post from "./data/posting";
 import PostList from "./components/postList";
 import PostFilterBar from "./components/postFilterBar";
 import {PostDetailContainer} from "./container/postDetailContainer";
+import {MypageContainer} from "./container/mypageContainer";
 
 
 const root = ReactDOM.createRoot(
@@ -32,7 +33,7 @@ root.render(
             <Route path="postdetail" element={<PostDetailContainer />} />
             <Route path="majorpostlist" element={<MajorPostList major={"컴공"} posts={postListTest.posts} userid={1} />} />
             <Route path="chatting" element={<Chatting />} />
-            <Route path="mypage" element={<MyPage  babyak={11} major={"음악과 20"} nickname={"붐바음악"} noshow={1}/>} />
+            <Route path="mypage" element={<MypageContainer />} />
             <Route path="posting" element={<Posting />} />
             <Route path="noshow" element={<NoshowReport  users={noShowEx.users}/>} />
             <Route path="filterbar" element={<PostFilterBar />} />

@@ -26,7 +26,7 @@ export class AllPostList extends Component{
                 <PostListHeader major={major} type={false} />
                 <PostListContainer major={major} posts={postListTest.posts} userid={postListTest.userid} />
                 <PostingButtonContainer />
-                <div><MenuFooter type={0}/></div>
+                <MenuFooter type={0}/>
             </div>
         )
     }
