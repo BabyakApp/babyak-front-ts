@@ -12,7 +12,6 @@ import {connect} from "react-redux";
 import GetPost from "../data/getPost";
 import NoshowReportContainer from "../container/noshowReportContainer";
 
-
 let major:string = "컴공";
 // let postdata = GetPost().postData;
 // let postList:ListProps = {
@@ -21,9 +20,7 @@ let major:string = "컴공";
 //     posts:postdata.posts
 // };
 export class AllPostList extends Component{
-
     render(){
-
         return(
             <div>
                 <PostListHeader major={major} type={false} />

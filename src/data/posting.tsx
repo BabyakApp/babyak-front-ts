@@ -7,6 +7,7 @@ import {PostForm} from "../components/postList";
 
 export function Post(){
     let postData:PostForm = {
+        chatroomid:11,
         chatTitle:"api 테스트 게시글",
         date:"월",
         food:"양식",

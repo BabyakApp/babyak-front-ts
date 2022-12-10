@@ -16,7 +16,6 @@ import NoshowReport from "./components/noshowReport";
 import GetPost from "./data/getPost";
 import Post from "./data/posting";
 import PostList from "./components/postList";
-import PostFilter from "./data/postFilter";
 import PostFilterBar from "./components/postFilterBar";
 import {PostDetailContainer} from "./container/postDetailContainer";
 
@@ -29,9 +28,9 @@ root.render(
         <Routes>
             <Route path="/" element={<App />} />
             <Route path="postlist" element={<PostList posts={postListTest.posts} userid={4} major={"컴공"} />} />
-            <Route path="allpostlist" element={<AllPostList />} />
+            <Route path="post" element={<AllPostList />} />
+            <Route path="postdetail" element={<PostDetailContainer />} />
             <Route path="majorpostlist" element={<MajorPostList major={"컴공"} posts={postListTest.posts} userid={1} />} />
-            <Route path="postdetail/:key" element={<PostDetailContainer />} />
             <Route path="chatting" element={<Chatting />} />
             <Route path="mypage" element={<MyPage  babyak={11} major={"음악과 20"} nickname={"붐바음악"} noshow={1}/>} />
             <Route path="posting" element={<Posting />} />

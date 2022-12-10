@@ -16,10 +16,11 @@ export function PostListHeader({type, major}:headerProps) {
     return(<div className={styles.Header}>
         <div className={styles.HeaderTitle}>밥약</div>
         <div>
-            <Link to="/allpostlist"><button className={type?styles.HeaderButtonDefault:styles.HeaderButtonSelected}>모두의 밥약</button></Link>
+            <Link to="/post"><button className={type?styles.HeaderButtonDefault:styles.HeaderButtonSelected}>모두의 밥약</button></Link>
             <Link to="/majorpostlist"><button className={type?styles.HeaderButtonSelected:styles.HeaderButtonDefault}>{major}의 밥약</button></Link>
         </div>
         <PostFilterBar />
+
     </div>)
 }
 

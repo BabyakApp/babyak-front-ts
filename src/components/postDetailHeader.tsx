@@ -8,7 +8,7 @@ export function PostDetailHeader({post, key}:PostProps){
     return(
         <div>
             <button className={styles.BackButton}>
-                <Link to="/allpostlist"><img src= "img/backbutton.png"/></Link>
+                <Link to="/post"><img src= "img/backbutton.svg"/></Link>
             </button>
             <span className={styles.DetailTitle}>{post.chatTitle}</span>
         </div>

@@ -91,6 +91,10 @@
     background-color: #fff;
     border-width: 0;
 }
+.PostFilterBar{
+    background-color: white;
+    position: fixed;
+}
 
 .MenuFooter{
     width: 100%;
@@ -121,7 +125,7 @@
     text-align: left;
 }
 .PostList {
-    padding-top: 38%;
+    padding-top: 48%;
     padding-bottom: 22%;
 }
 .PostTitle{
@@ -475,6 +479,7 @@
     margin: 8% 0 0 20%;
 }
 .NoshowreportNickname{
+    margin-right: 45%;
     font-family: NotoSansKRMedium;
     font-size: 12px;
     font-weight: 500;
@@ -484,14 +489,6 @@
     letter-spacing: normal;
     text-align: center;
     color: #151515;
-}
-.NoshowreportCheckButton{
-    margin-left: 45%;
-    padding: 5% 5% 0 0;
-    flex-grow: 0;
-    border-radius: 3px;
-    border: solid 0.7px #000;
-    background-color: white;
 }
 .NoshowreportSubmitButton{
     width: 84%;

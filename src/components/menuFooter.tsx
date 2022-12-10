@@ -19,7 +19,7 @@ export function MenuFooter(props:MenuProps){
 
     return(
         <div className={styles.MenuFooter}>
-            <Link to="/allpostlist">
+            <Link to="/post">
                 <button className={styles.MenuButton}><img src={babyak}/></button>
             </Link>
             <Link to="/chatting">

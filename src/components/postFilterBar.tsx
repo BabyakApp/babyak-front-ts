@@ -9,7 +9,9 @@ import {Autocomplete, FormHelperText, TextField} from "@mui/material";
 import {useCallback, useEffect, useState} from "react";
 import {postListTest} from "data/testdata"
 import FilteringPost from "../data/filteringPost";
+import {ListProps} from "./postList";
 
+export let filteredPost:ListProps;
 export interface filterValue {
     date:string,
     time:string,
@@ -111,9 +113,9 @@ export function PostFilterBar(){
         people:"4",
         food:"한식"
     }
-    let filteredPost = FilteringPost(FilterEx,filteredCollect(),postListTest);
+    filteredPost = FilteringPost(FilterEx,filteredCollect(),postListTest);
 
-    return(<div>
+    return(<div className={styles.PostFilterBar}>
         <FormControl>
             <FormHelperText><img src= "img/filterdate.svg"/></FormHelperText>
             <Select

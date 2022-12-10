@@ -3,9 +3,11 @@ import Post from "./postBox";
 import {inspect, log} from "util";
 import styles from "../style/StyleSetting.module.css";
 import axios from "axios";
+import {postListTest} from "../data/testdata";
 
 
 export interface PostForm{
+    chatroomid: number,
     date: string,
     chatTitle: string,
     time: string,
@@ -58,10 +60,11 @@ export function PostList(postList:ListProps){
         let posts:ListProps = jsontoForm(result);
         postList = posts;
     }
+    postList = postListTest;
 
     return<div className={styles.PostList}>
-        {postList.posts&&postList.posts.map((post, i:number) => (
-            <Post post={post} key={i} />
+        {postList.posts&&postList.posts.map((post, key = post.chatroomid) => (
+            <Post post={post} key={key} />
         ))}
     </div>
 

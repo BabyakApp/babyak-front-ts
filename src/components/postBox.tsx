@@ -23,32 +23,37 @@ const Button = styled.button`
   background-color: #fff;
 `;
 
-export function Post({post, key}:PostProps){
+export function Post(data:PostProps){
     const [tab, setTab] = useState<string>('view');
     const onClick = () => setTab('click');
+    const key = data.key;
     return(<div>
-        <Link to="/postdetail">
+        <Link to={{
+            pathname:`/postdetail`
+
+        }}>
         <button className={styles.PostBox} onClick={onClick}>
         <span>
             <p>
-                <span className={styles.PostTitle}>{post.chatTitle}</span>
-                <span className={styles.PostTime}>11.23.수  <img src= "img/listtimeicon.svg"/> {post.time}교시</span>
-                <p className={styles.PostContent}>{post.content}</p>
+                <span className={styles.PostTitle}>{data.post.chatTitle}</span>
+                <span className={styles.PostTime}>11.23.수  <img src= "img/listtimeicon.svg"/> {data.post.time}교시</span>
+                <p className={styles.PostContent}>{data.post.content}</p>
             </p>
             <p>
                 <span>
                     <img src= "img/profile.svg"/>
-                    <span className={styles.PostWriter}>{post.writerNickname}</span>
-                    <span className={styles.PostMajor}>|{post.writerMajor}</span>
+                    <span className={styles.PostWriter}>{data.post.writerNickname}</span>
+                    <span className={styles.PostMajor}>|{data.post.writerMajor}</span>
                 </span>
                 <span className={styles.PostOption}>
                     <img src= "img/listpeopleicon.svg"/>
-                    1/{post.people}
+                    1/{data.post.people}/{key}
                     <img src= "img/listlocationicon.svg"/>
-                    {post.location}
+                    {data.post.location}
                     <img src= "img/listfoodicon.svg"/>
-                    {post.food}
+                    {data.post.food}
                 </span>
+
             </p>
         </span>
         </button>
