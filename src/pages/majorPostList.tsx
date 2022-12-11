@@ -8,22 +8,19 @@ import PostingButton, {PostingButtonContainer} from "../container/postingButtonC
 import {postListTest} from "../data/testdata";
 import PostList, {ListProps} from "../components/postList";
 import PostListContainer from "../components/postList";
+import MajorPost from "../data/majorPost";
 
 
 export function MajorPostList(postList:ListProps) {
-    const options = {
-        root: document.querySelector('.container'),
-        rootMargin: '10px',
-        threshold: [0, 0.5, 1]
-    }
+    const newpostList = MajorPost(postList);
 
     return(
         <div>
             <PostListHeader major={postList.major} type={true} />
-            <PostListContainer major={"컴공"} posts={postListTest.posts} userid={1} />
+            <PostListContainer major={"컴공"} posts={newpostList.posts} userid={1} />
             <div><PostingButtonContainer /></div>
             <div>
-                <MenuFooter  type={0}/>
+                <MenuFooter type={0}/>
             </div>
         </div>
     )

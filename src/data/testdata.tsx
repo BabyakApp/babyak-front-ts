@@ -21,17 +21,17 @@ let postEx11:PostForm;
 postEx1={
     chatroomid:1,
     chatTitle:"테스트를 위한 글 제목", date:"월", time:"3", people:4, food:"한식", location:"정문", content:"테스트를 위한 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공19"
+    writerNickname:"컴터도리", writerMajor:"컴공"
 }
 postEx2={
     chatroomid:2,
     chatTitle:"테스트를 위한 글 제목", date:"월", time:"3", people:4, food:"한식", location:"후문", content:"테스트를 위한 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공19"
+    writerNickname:"컴터도리", writerMajor:"컴공"
 }
 postEx3={
     chatroomid:3,
     chatTitle:"테스트를 위한 글 제목", date:"월", time:"4", people:4, food:"양식", location:"정문", content:"테스트를 위한 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공19"
+    writerNickname:"컴터도리", writerMajor:"융콘"
 }
 postEx4={
     chatroomid:4,

@@ -51,16 +51,16 @@ export async function GetPostListData(){
 
 export function PostList(postList:ListProps){
     const [result, setResult] = useState(null);
-    let res = GetPostListData().then((response)=>{
-            setResult(response)
-            return response
-        }
-    );
-    if(result){
-        let posts:ListProps = jsontoForm(result);
-        postList = posts;
-    }
-    postList = postListTest;
+    // let res = GetPostListData().then((response)=>{
+    //         setResult(response)
+    //         return response
+    //     }
+    // );
+    // if(result){
+    //     let posts:ListProps = jsontoForm(result);
+    //     postList = posts;
+    // }
+    // postList = postListTest;
 
     return<div className={styles.PostList}>
         {postList.posts&&postList.posts.map((post, key = post.chatroomid) => (
