@@ -10,7 +10,6 @@ import {Link} from "react-router-dom";
 import WishButton from "../components/wishButton";
 import Info from "../components/info";
 import DetailInfo from "../components/detailInfo";
-import {NoshowReportContainer} from "../container/noshowReportContainer";
 
 
 export function PostDetail({post, key}: PostProps){
@@ -30,7 +29,7 @@ export function PostDetail({post, key}: PostProps){
                 <WishButton />
             </div>
         </div>
-        <MenuFooter  type={0}/>
+        <MenuFooter type={0}/>
     </div>
 }
 

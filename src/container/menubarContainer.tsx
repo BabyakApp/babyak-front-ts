@@ -6,9 +6,11 @@ import * as React from "react";
 import MyPage from "../pages/myPage";
 import MenuFooter from "../components/menuFooter";
 
-export class MypageContainer extends Component{
+export class MenubarContainer extends Component{
     render() {
-        return(<MyPage babyak={11} major={"음악과 20"} nickname={"붐바음악"} noshow={1}/>);
+        return(
+            <MenuFooter type={2}/>
+        );
     }
 }
 
@@ -16,4 +18,4 @@ export class MypageContainer extends Component{
 export default connect(
     null,
     dispatch => ({})
-)(MypageContainer);
+)(MenubarContainer);

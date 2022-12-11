@@ -104,7 +104,7 @@
     justify-content: space-between;
     object-fit: contain;
     position: fixed;
-    background-color: white;
+    background-color: #ffffff;
 
 }
 .MenuButton{
@@ -364,7 +364,7 @@
 .MypageHeader{
     width: 100%;
     height: 10%;
-    margin: 8% 0 0 0;
+    padding-top: 8%;
     font-family: NotoSansKRBold;
     font-size: 16px;
     font-weight: bold;
@@ -527,7 +527,7 @@
     height: 100%;
     width: 100%;
     margin: 0 0 0 0;
-    padding: 40% 0 97% 0;
+    padding: 45% 0 97% 0;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
 }

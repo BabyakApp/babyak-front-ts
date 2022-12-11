@@ -19,6 +19,7 @@ import PostList from "./components/postList";
 import PostFilterBar from "./components/postFilterBar";
 import {PostDetailContainer} from "./container/postDetailContainer";
 import {MypageContainer} from "./container/mypageContainer";
+import NoshowModal from "./pages/noshowModal";
 
 
 const root = ReactDOM.createRoot(
@@ -37,6 +38,7 @@ root.render(
             <Route path="posting" element={<Posting />} />
             <Route path="noshow" element={<NoshowReport  users={noShowEx.users}/>} />
             <Route path="filterbar" element={<PostFilterBar />} />
+            <Route path="noshowmodal" element={<NoshowModal />} />
         </Routes>
     </BrowserRouter>
 );

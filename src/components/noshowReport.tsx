@@ -14,9 +14,9 @@ export interface noshowProps{
 
 export function NoshowReport(member:noshowProps){
     const [noshow, setNoshow] = useState(false);
-    const [tab, setTab] =useState("initial value");
+    const [tab, setTab] = useState("initial value");
     const test = () => setTab(JSON.stringify("posting finish"));
-    const [check, setCheck] = useState([false,false,false]);
+    const [noshowCheck, setNoshowCheck] = useState([false,false,false]);
 
     useEffect(()=>{
         const noshowapi = async() => {
@@ -31,6 +31,7 @@ export function NoshowReport(member:noshowProps){
         noshowapi();
     },[tab]);
 
+
     return<div className={styles.NoshowreportBackground}>
         <div className={styles.NoshowreportBox}>
             <div className={styles.NoshowreportTitle}>밥약 노쇼 리포트</div>
@@ -41,10 +42,10 @@ export function NoshowReport(member:noshowProps){
                     <div className={styles.NoshowreportUserItem}>
                         <span className={styles.NoshowreportNickname}>{user.nick}</span>
                         <img onClick={()=>{
-                            check[key] = !check[key]
-                            setCheck(check)
-                            console.log(check)
-                        }} src={ check[key]?'img/checkedNoshow.svg':'img/defaultNoshow.svg'} />
+                            let newArr = [...noshowCheck];
+                            newArr[key] = !newArr[key];
+                            setNoshowCheck(newArr)
+                        }} src={ noshowCheck[key]?'img/checkedNoshow.svg':'img/defaultNoshow.svg'} />
                     </div>
                     ))}
             </div>

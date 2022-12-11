@@ -36,6 +36,7 @@ export function MyPage(user:mypageProps){
             <span className={styles.MypageInfo}>나의 시간표</span>
             <div><img className={styles.MypageTimetable} src= "img/timetable.svg"/></div>
         </button>
+        <MenuFooter type={2}/>
     </div>)
 }
 
