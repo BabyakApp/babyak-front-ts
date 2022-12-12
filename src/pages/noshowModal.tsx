@@ -3,13 +3,14 @@ import AllPostList from "./allPostList";
 import {NoshowReportContainer} from "../container/noshowReportContainer";
 import {PostDetailContainer} from "../container/postDetailContainer";
 import {MypageContainer} from "../container/mypageContainer";
+import NoshowSubmit from "../components/noshowSubmit";
 
 
 export function NoshowModal(){
     return(
         <div>
             <NoshowReportContainer />
-            <MypageContainer />
+            <AllPostList />
         </div>)
 }
 

@@ -20,7 +20,7 @@
 .Header{
     width: 100%;
     position: fixed;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .HeaderTitle{
@@ -92,7 +92,8 @@
     border-width: 0;
 }
 .PostFilterBar{
-    background-color: white;
+    top: 11.5%;
+    background-color: #ffffff;
     position: fixed;
 }
 
@@ -127,6 +128,7 @@
 .PostList {
     padding-top: 48%;
     padding-bottom: 22%;
+    background-color: #ffffff;
 }
 .PostTitle{
     flex-grow: 0;
@@ -454,6 +456,7 @@
     margin: 0 5% 0 5%;
     border-radius: 11px;
     position: fixed;
+    z-index: 1;
 
 }
 .NoshowreportTitle{
@@ -510,6 +513,17 @@
     background-color: #ffebf0;
     position: fixed;
 }
+.NoshowreportSubmitButtonClick{
+    width: 84%;
+    height: 6%;
+    margin: 8% 0 60% 3%;
+    padding: 0 10% 6% 0;
+    border-width: 0;
+    border-radius: 11px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ff366a;
+    position: fixed;
+}
 .NoshowreportButtonText{
     flex-grow: 0;
     font-family: NotoSansKRBold;
@@ -530,4 +544,26 @@
     padding: 45% 0 97% 0;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
+    z-index: 2;
+}
+.NoshowSubmit{
+    flex-grow: 0;
+    margin: 30% 8% 0 8%;
+    padding: 15% 16% 15% 16%;
+    border-radius: 11px;
+    border-width: 0;
+    background-color: #ffffff;
+    position: fixed;
+}
+
+.NoshowSubmitText{
+    font-family: NotoSansKRRegular;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #151515;
 }

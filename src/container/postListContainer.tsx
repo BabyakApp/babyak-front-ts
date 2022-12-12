@@ -4,6 +4,8 @@ import {connect} from "react-redux";
 import PostList, {GetPostListData, ListProps, PostForm} from "../components/postList";
 
 import {postListTest} from "../data/testdata";
+import PostFilterBar from "../components/postFilterBar";
+import FilteringPost from "../data/filteringPost";
 
 // let postListEx:ListProps;
 // let postEx:PostForm;
@@ -23,7 +25,6 @@ import {postListTest} from "../data/testdata";
 
 
 export class PostListContainer extends Component{
-
     render() {
         return <div>
             <PostList posts={postListTest.posts} userid={1} major={"컴공"} />
