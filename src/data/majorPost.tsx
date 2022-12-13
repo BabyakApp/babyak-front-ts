@@ -16,7 +16,6 @@ export function MajorPost(postList:ListProps){
         userid:majorList.userid,
         posts:majorposts
     }
-    console.log("결과",result)
 
     return(result);
 }

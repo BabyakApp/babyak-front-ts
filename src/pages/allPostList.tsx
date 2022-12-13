@@ -11,6 +11,8 @@ import PostListContainer from "../components/postList";
 import {connect} from "react-redux";
 import GetPost from "../data/getPost";
 import NoshowReportContainer from "../container/noshowReportContainer";
+import PostFilterBar, {filterValue} from "../components/postFilterBar";
+import FilteringPost from "../data/filteringPost";
 
 let major:string = "컴공";
 // let postdata = GetPost().postData;
@@ -19,19 +21,24 @@ let major:string = "컴공";
 //     major: postdata.major,
 //     posts:postdata.posts
 // };
-export class AllPostList extends Component{
-    render(){
-        return(
-            <div>
-                <PostListHeader major={major} type={false} />
-                <PostListContainer major={major} posts={postListTest.posts} userid={postListTest.userid} />
-                <PostingButtonContainer />
-                <MenuFooter type={0}/>
-            </div>
-        )
+export function AllPostList(){
+    const [filteredList, setFilteredList] = useState(postListTest)
+    function filterTest(value:filterValue,checked:any,postList:ListProps){
+        postList = FilteringPost(value,checked,filteredList)
+        console.log(postList)
+        setFilteredList(postList)
     }
+
+    return(
+        <div>
+            <PostListHeader major={major} type={false} />
+            <PostFilterBar propFunction={filterTest} postlist={postListTest.posts} />
+            <PostListContainer major={major} posts={filteredList.posts} userid={postListTest.userid} />
+            <PostingButtonContainer />
+            <MenuFooter type={0}/>
+        </div>
+    )
+
 }
-
-
 
 export default AllPostList;

@@ -2,6 +2,7 @@ import * as React from "react";
 import styles from '../style/StyleSetting.module.css'
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
+import {styled} from "@mui/material";
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
@@ -20,7 +21,12 @@ export interface filterValue {
     food:string
 }
 
-export function PostFilterBar(){
+export function PostFilterBar(props:any){
+    const [date, setDate] = React.useState('');
+    const [time, setTime] = React.useState('');
+    const [location, setLocation] = React.useState('');
+    const [people, setPeople] = React.useState('');
+    const [food, setFood] = React.useState('');
     const [filterState, setFilterState] = useState({
         filterType: {
             date: false,
@@ -30,11 +36,29 @@ export function PostFilterBar(){
             food: false
         }
     });
-    const [date, setDate] = React.useState('');
-    const [time, setTime] = React.useState('');
-    const [location, setLocation] = React.useState('');
-    const [people, setPeople] = React.useState('');
-    const [food, setFood] = React.useState('');
+    const filteredCollect = useCallback(() => {
+        const selected = [];
+        const now = filterState.filterType;
+        for(let type in now){
+            if(now[type as keyof typeof now] == true){
+                selected.push(type);
+            }
+        }
+        return selected;
+    }, [filterState.filterType]);
+
+
+    let FilterEx:filterValue = {
+        date:date,
+        time:time,
+        location:location,
+        people:people,
+        food:food
+    };
+    const filteredPostList = useEffect(() => {
+        props.propFunction(FilterEx,filteredCollect(),props.postlist)
+
+    },[filteredCollect]);
 
     const handleDateChange = (event: SelectChangeEvent) => {
         if(event.target.value == ''){
@@ -72,25 +96,6 @@ export function PostFilterBar(){
         setFood(event.target.value);
     };
 
-    const filteredCollect = useCallback(() => {
-        const selected = [];
-        const now = filterState.filterType;
-        for(let type in now){
-            if(now[type as keyof typeof now] == true){
-                selected.push(type);
-            }
-        }
-        return selected;
-    }, [filterState.filterType]);
-
-
-    let FilterEx:filterValue = {
-        date:date,
-        time:time,
-        location:location,
-        people:people,
-        food:food
-    };
     const filterButton = {
         width:67,
         height:45,
@@ -100,20 +105,26 @@ export function PostFilterBar(){
         boxShadow:1,
         fontWeight:'medium',
         textAlign:'center',
-        fontsize:1
+        fontsize:1,
+        position:'sticky',
+        borderColor: "#5b5b5b",
+        ".MuiOutlinedInput-notchedOutline": {
+            borderColor: "#5b5b5b"
+        },
+        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#5b5b5b"
+        },
+        "&:hover .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#5b5b5b"
+        },
+        ".MuiSvgIcon-root ": {
+            fill: "white !important"
+        }
     }
     const filterText = {
         fontWeight:'medium',
         textAlign:'center'
     }
-    const foodEx:filterValue = {
-        date:"월",
-        time:"4",
-        location:"정문",
-        people:"4",
-        food:"한식"
-    }
-    filteredPost = FilteringPost(FilterEx,filteredCollect(),postListTest);
 
     return(<div className={styles.PostFilterBar}>
         <FormControl>
