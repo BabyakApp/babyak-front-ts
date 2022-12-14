@@ -12,50 +12,52 @@ export interface PostProps {
     post: PostForm,
     key: number
 }
-
-const Button = styled.button`
-  width: 341px;
-  height: 120px;
-  flex-grow: 0;
-  margin: 0 6px 0 0;
-  padding: 7px 10px 8px 10.7px;
-
-  background-color: #fff;
-`;
+enum strType { title, content}
+function stringCut(str:string, type:strType){
+    let result:string = ""
+    if(type == strType.title){
+        if(str.length>17)
+            result = str.substring(0,17)+"...";
+        else
+            result = str;
+    }else if(type == strType.content){
+        if(str.length>25)
+            result = str.substring(0,25)+"...";
+        else
+            result=str;
+    }
+    return result;
+}
 
 export function Post(data:PostProps){
     const [tab, setTab] = useState<string>('view');
     const onClick = () => setTab('click');
     const key = data.key;
     return(<div>
-        <Link to={{
-            pathname:`/postdetail`
-
-        }}>
+        <Link to={{pathname:`/postdetail`}}>
         <button className={styles.PostBox} onClick={onClick}>
-        <span>
-            <p>
-                <span className={styles.PostTitle}>{data.post.chatTitle}</span>
-                <span className={styles.PostTime}>11.23.수  <img src= "img/listtimeicon.svg"/> {data.post.time}교시</span>
-                <p className={styles.PostContent}>{data.post.content}</p>
-            </p>
-            <p>
-                <span>
+        <div>
+            <div>
+                <div className={styles.PostTitleBar}>
+                    <div className={styles.PostTime}>{data.post.date}  <img src= "img/listtimeicon.svg"/> {data.post.time}교시</div>
+                    <div className={styles.PostTitle}>{stringCut(data.post.chatTitle, strType.title)}</div>
+                </div>
+                <div className={styles.PostContent}>{stringCut(data.post.content, strType.content)}</div>
+            </div>
+            <div className={styles.PostBottom}>
+                <div className={styles.PostUser}>
                     <img src= "img/profile.svg"/>
                     <span className={styles.PostWriter}>{data.post.writerNickname}</span>
                     <span className={styles.PostMajor}>|{data.post.writerMajor}</span>
-                </span>
-                <span className={styles.PostOption}>
-                    <img src= "img/listpeopleicon.svg"/>
-                    1/{data.post.people}/{key}
-                    <img src= "img/listlocationicon.svg"/>
-                    {data.post.location}
-                    <img src= "img/listfoodicon.svg"/>
-                    {data.post.food}
-                </span>
+                </div>
+                <div className={styles.PostOption}>
+                    <span className={styles.PostPeople}><img src= "img/listpeopleicon.svg"/>1/{data.post.people}</span>
+                    <span className={styles.PostPeople}><img src= "img/listlocationicon.svg"/>{data.post.location}</span>
+                    <span className={styles.PostLocation}><img src= "img/listfoodicon.svg"/>{data.post.food}</span>
+                </div>
 
-            </p>
-        </span>
+            </div>
+        </div>
         </button>
         </Link>
         </div>)

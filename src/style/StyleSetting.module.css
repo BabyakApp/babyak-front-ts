@@ -118,7 +118,7 @@
     height: 120px;
     flex-grow: 0;
     margin: 0 0 3% 3%;
-    padding: 0% 1% 0% 3%;
+    padding: 2% 3% 2% 3%;
     border-radius: 13px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
     background-color: #fff;
@@ -131,8 +131,8 @@
     background-color: #ffffff;
 }
 .PostTitle{
+    width: 65%;
     flex-grow: 0;
-    margin: 0 0 0 0.3px;
     font-family: NotoSansKRBold;
     font-size: 14px;
     font-weight: bold;
@@ -142,11 +142,10 @@
     letter-spacing: normal;
     text-align: left;
     color: #000;
-
 }
 .PostTime{
+    width: 25%;
     flex-grow: 0;
-    margin: 0 0 0 35%;
     font-family: NotoSansKRMedium;
     font-size: 10px;
     font-weight: 500;
@@ -156,19 +155,30 @@
     letter-spacing: normal;
     text-align: right;
     color: #000;
-
+    float: right;
+}
+.PostTitleBar{
+    padding: 0 0 0 0;
 }
 .PostContent{
-    margin: 0 0 6% 0;
+    width: 67%;
+    margin: 0.5% 0 0% 0;
     font-family: NotoSansKRRegular;
     font-size: 10px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 2;
     letter-spacing: normal;
     text-align: left;
     color: #000;
+
+}
+.PostBottom{
+    margin: 10% 0 0 0;
+}
+.PostUser{
+    width: 37%;
+    float: left;
 }
 .PostWriter{
     margin: 0 0 0 2%;
@@ -183,7 +193,9 @@
 }
 .PostOption{
     justify-content: space-between;
-    margin-left: 37%;
+    margin-left: 60%;
+    padding-top: 5%;
+    padding-left: 5%;
     font-family: NotoSansKRRegular;
     font-size: 10px;
     font-weight: 500;
@@ -193,6 +205,15 @@
     letter-spacing: normal;
     text-align: right;
     color: #000;
+
+}
+.PostPeople{
+    margin-right: 4%;
+}
+.PostLocation{
+    margin-right: 4%;
+}
+.PostFood{
 }
 .DetailTitle{
     height: 17px;
@@ -376,6 +397,7 @@
     letter-spacing: normal;
     text-align: center;
     color: #000
+
 }
 .MypagePic{
     padding-left: 13%;
