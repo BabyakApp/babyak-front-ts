@@ -20,57 +20,57 @@ let postEx11:PostForm;
 
 postEx1={
     chatroomid:1,
-    chatTitle:"테스트를 위한 글 제목", date:"12.12 월", time:"3", people:4, food:"한식", location:"정문", content:"테스트를 위한 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공19"
+    title:"정문에서 가볍게 밥드실분",currentPeople:3, meetingDate:"12.12 월", meetingTime:"3교시", maxPeople:4, preferredFood:"한식", meetingSite:"정문", detail:"정문에서 만나서 밥집 같이 가실분 구해요",
+    nickname:"가나다라", major:"융콘19"
 }
 postEx2={
     chatroomid:2,
-    chatTitle:"테스트를 위한 조금 더 긴 글 제목", date:"12.12 월", time:"3", people:3, food:"한식", location:"후문", content:"테스트를 위해서 조금 더 길어진 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공18"
+    title:"신룽푸 마라탕 먹을 사람",currentPeople:1, meetingDate:"12.13 화", meetingTime:"3교시", maxPeople:3, preferredFood:"중식", meetingSite:"정문", detail:"정문 앞에 있는 신룽푸 마라탕에서 같이 마라탕 먹을 사람 구합니다! 혹시 이후에 시간되시면 점심 먹은 후에 가볍게 카페가서 커피 마셔도 좋을 것 같아요 :-)",
+    nickname:"메추리알", major:"경영21"
 }
 postEx3={
     chatroomid:3,
-    chatTitle:"테스트를 위해서 엄청나게 길어지는 글 제목", date:"12.12 월", time:"4", people:4, food:"양식", location:"정문", content:"테스트를 위해서 엄청나게 길어지는 글 내용",
-    writerNickname:"컴터도리", writerMajor:"융콘20"
+    title:"오늘 저녁에 곱창에 소주할 벗모여", currentPeople:2,meetingDate:"12.12 월", meetingTime:"4교시", maxPeople:4, preferredFood:"기타", meetingSite:"후문", detail:"신촌 황소 곱창 갈건데 소주 맥주 상관없이 반주하장",
+    nickname:"물고구마", major:"융콘20"
 }
 postEx4={
     chatroomid:4,
-    chatTitle:"테스트를 위해서 엄청나게 길어져서 감당하기 힘든 글 제목", date:"12.14 수", time:"3", people:4, food:"한식", location:"기타", content:"테스트를 위해서 엄청나게 길어진 나머지 감당하기 힘들어진 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공19"
+    title:"야담에서 샐러드 먹을 사람", currentPeople:1,meetingDate:"12.14 수", meetingTime:"3교시", maxPeople:3, preferredFood:"비건", meetingSite:"정문", detail:"박스퀘어 야담에서 샐러드 같이 먹을 사람 없나",
+    nickname:"비타민씨", major:"컴공21"
 }
 postEx5={
     chatroomid:5,
-    chatTitle:"테스트를 위한 글 제목", date:"12.12 월", time:"3", people:2, food:"중식", location:"정문", content:"테스트를 위한 글 내용",
-    writerNickname:"헤헤", writerMajor:"국문20"
+    title:"윈즈 오운에서 카공할사람",currentPeople:1, meetingDate:"12.12 월", meetingTime:"3교시", maxPeople:2, preferredFood:"양식", meetingSite:"정문", detail:"녹강 듣는데 같이 공부할 사람 모여랑",
+    nickname:"헤헤헤", major:"국문20"
 }
 postEx6={
     chatroomid:6,
-    chatTitle:"테스트를 위한 글 제목", date:"12.12 월", time:"3", people:4, food:"한식", location:"후문", content:"테스트를 위한 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공19"
+    title:"후문에 식탁에서 밥 같이 먹자",currentPeople:1, meetingDate:"12.12 월", meetingTime:"3교시", maxPeople:4, preferredFood:"한식", meetingSite:"후문", detail:"식탁에서 가지덮밥이랑 파스타 같이 먹을 사람 들어와",
+    nickname:"계란말이", major:"융콘22"
 }
 postEx7={
     chatroomid:7,
-    chatTitle:"테스트를 위한 글 제목", date:"12.12 월", time:"4", people:6, food:"한식", location:"기숙사", content:"테스트를 위한 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공19"
+    title:"기숙사에서 김치찜 같이 배달시킬 사람",currentPeople:1, meetingDate:"12.12 월", meetingTime:"4교시", maxPeople:2, preferredFood:"한식", meetingSite:"기숙사", detail:"더 가득담은 김치찜 같이 시킬 사람 구해요~",
+    nickname:"날다람쥐", major:"화신21"
 }
 postEx8={
     chatroomid:8,
-    chatTitle:"테스트를 위한 글 제목", date:"12.13 화", time:"3", people:2, food:"한식", location:"기타", content:"테스트를 위한 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공19"
+    title:"후문쪽에 존재의 이유 같이 갈사람", currentPeople:1,meetingDate:"12.13 화", meetingTime:"3교시", maxPeople:2, preferredFood:"한식", meetingSite:"기타", detail:"존재의 이유에서 가볍게 점심 같이 먹을 사람 구합니당",
+    nickname:"아이스티", major:"컴공19"
 }
 postEx9={
     chatroomid:9,
-    chatTitle:"테스트를 위한 글 제목", date:"12.12 월", time:"3", people:4, food:"일식", location:"정문", content:"테스트를 위한 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공19"
+    title:"진선미관 학식 먹자",currentPeople:1, meetingDate:"12.12 월", meetingTime:"3교시", maxPeople:4, preferredFood:"일식", meetingSite:"정문", detail:"나 한번도 안가봐서 위치를 잘모르는데 알려주고 같이 먹을 사람",
+    nickname:"동그라미", major:"컴공19"
 }
 postEx10={
     chatroomid:10,
-    chatTitle:"테스트를 위한 글 제목", date:"12.14 수", time:"4", people:4, food:"한식", location:"정문", content:"테스트를 위한 글 내용",
-    writerNickname:"컴터도리", writerMajor:"컴공19"
+    title:"테스트를 위한 글 제목", currentPeople:2,meetingDate:"12.14 수", meetingTime:"4교시", maxPeople:4, preferredFood:"한식", meetingSite:"정문", detail:"테스트를 위한 글 내용",
+    nickname:"포스트잇", major:"컴공19"
 }
 postListTest= {
     userid:1,
-    major:"컴공",
+    major:"융콘",
     posts: [postEx1, postEx2, postEx3, postEx4, postEx5, postEx6, postEx7, postEx8,postEx9,postEx10]
 }
 

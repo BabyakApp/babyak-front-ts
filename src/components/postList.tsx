@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import Post from "./postBox";
-import {inspect, log} from "util";
 import styles from "../style/StyleSetting.module.css";
 import axios from "axios";
 import {postListTest} from "../data/testdata";
@@ -8,15 +7,16 @@ import {postListTest} from "../data/testdata";
 
 export interface PostForm{
     chatroomid: number,
-    date: string,
-    chatTitle: string,
-    time: string,
-    people: number,
-    food: string,
-    location: string,
-    content: string
-    writerNickname: string,
-    writerMajor: string
+    meetingDate: string,
+    title: string,
+    meetingTime: string,
+    maxPeople: number,
+    preferredFood: string,
+    meetingSite: string,
+    currentPeople:number,
+    detail: string
+    nickname: string,
+    major: string
 }
 interface UserProps{
     userid: number,
@@ -38,8 +38,9 @@ export function jsontoForm(jsonfile:Array<any>){
 
 export async function GetPostListData(){
     try {
-        let response = await axios.get("http://localhost:8080/AllList")
+        let response = await axios.get("http://3.36.207.252:8080/post/all")
             .then((res) => {
+                console.log(res.data)
                 return res.data;
             })
             .catch(err => console.log(err))
@@ -50,17 +51,7 @@ export async function GetPostListData(){
 }
 
 export function PostList(postList:ListProps){
-    const [result, setResult] = useState(null);
-    // let res = GetPostListData().then((response)=>{
-    //         setResult(response)
-    //         return response
-    //     }
-    // );
-    // if(result){
-    //     let posts:ListProps = jsontoForm(result);
-    //     postList = posts;
-    // }
-    // postList = postListTest;
+    //postList = postListTest;
 
     return<div className={styles.PostList}>
         {postList.posts&&postList.posts.map((post, key = post.chatroomid) => (

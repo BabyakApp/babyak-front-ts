@@ -14,11 +14,11 @@ import {ListProps} from "./postList";
 
 export let filteredPost:ListProps;
 export interface filterValue {
-    date:string,
-    time:string,
-    location:string,
-    people:string,
-    food:string
+    meetingDate:string,
+    meetingTime:string,
+    meetingSite:string,
+    maxPeople:string,
+    preferredFood:string
 }
 
 export function PostFilterBar(props:any){
@@ -29,11 +29,11 @@ export function PostFilterBar(props:any){
     const [food, setFood] = React.useState('');
     const [filterState, setFilterState] = useState({
         filterType: {
-            date: false,
-            time: false,
-            location: false,
-            people: false,
-            food: false
+            meetingDate: false,
+            meetingTime: false,
+            meetingSite: false,
+            maxPeople: false,
+            preferredFood: false
         }
     });
     const filteredCollect = useCallback(() => {
@@ -49,11 +49,11 @@ export function PostFilterBar(props:any){
 
 
     let FilterEx:filterValue = {
-        date:date,
-        time:time,
-        location:location,
-        people:people,
-        food:food
+        meetingDate:date,
+        meetingTime:time,
+        meetingSite:location,
+        maxPeople:people,
+        preferredFood:food
     };
     const filteredPostList = useEffect(() => {
         props.propFunction(FilterEx,filteredCollect(),props.postlist)
@@ -62,37 +62,37 @@ export function PostFilterBar(props:any){
 
     const handleDateChange = (event: SelectChangeEvent) => {
         if(event.target.value == ''){
-            setFilterState({ filterType: {...filterState.filterType, date:false }})
+            setFilterState({ filterType: {...filterState.filterType, meetingDate:false }})
         }else{
-            setFilterState({ filterType: {...filterState.filterType, date:true }})}
+            setFilterState({ filterType: {...filterState.filterType, meetingDate:true }})}
         setDate(event.target.value);
     };
     const handleTimeChange = (event: SelectChangeEvent) => {
         if(event.target.value == ''){
-            setFilterState({ filterType: {...filterState.filterType, time:false }})
+            setFilterState({ filterType: {...filterState.filterType, meetingTime:false }})
         }else{
-            setFilterState({ filterType: {...filterState.filterType, time:true }})}
+            setFilterState({ filterType: {...filterState.filterType, meetingTime:true }})}
         setTime(event.target.value);
     };
     const handleLocationChange = (event: SelectChangeEvent) => {
         if(event.target.value == ''){
-            setFilterState({ filterType: {...filterState.filterType, location:false }})
+            setFilterState({ filterType: {...filterState.filterType, meetingSite:false }})
         }else{
-            setFilterState({ filterType: {...filterState.filterType, location:true }})}
+            setFilterState({ filterType: {...filterState.filterType, meetingSite:true }})}
         setLocation(event.target.value);
     };
     const handlePeopleChange = (event: SelectChangeEvent) => {
         if(event.target.value == ''){
-            setFilterState({ filterType: {...filterState.filterType, people:false }})
+            setFilterState({ filterType: {...filterState.filterType, maxPeople:false }})
         }else{
-            setFilterState({ filterType: {...filterState.filterType, people:true }})}
+            setFilterState({ filterType: {...filterState.filterType, maxPeople:true }})}
         setPeople(event.target.value);
     };
     const handleFoodChange = (event: SelectChangeEvent) => {
         if(event.target.value == ''){
-            setFilterState({ filterType: {...filterState.filterType, food:false }})
+            setFilterState({ filterType: {...filterState.filterType, preferredFood:false }})
         }else{
-            setFilterState({ filterType: {...filterState.filterType, food:true }})}
+            setFilterState({ filterType: {...filterState.filterType, preferredFood:true }})}
         setFood(event.target.value);
     };
 

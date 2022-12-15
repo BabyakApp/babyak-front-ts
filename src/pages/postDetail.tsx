@@ -17,10 +17,10 @@ export function PostDetail({post, key}: PostProps){
         <PostDetailHeader post={post} key={key} />
         <div className={styles.DetailProfile}>
             <img src= "img/detailprofile.svg"/>
-            <span className={styles.DetailProfileNickname}>{post.writerNickname}</span>
-            <span className={styles.DetailProfileMajor}> |{post.writerMajor}</span>
+            <span className={styles.DetailProfileNickname}>{post.nickname}</span>
+            <span className={styles.DetailProfileMajor}> |{post.major}</span>
         </div>
-        <div className={styles.DetailContent}>{post.content}</div>
+        <div className={styles.DetailContent}>{post.detail}</div>
         <DetailInfo post={post} key={key} />
         <div>
             <Info />

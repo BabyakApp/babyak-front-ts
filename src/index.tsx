@@ -37,7 +37,7 @@ root.render(
             <Route path="chatting" element={<Chatting />} />
             <Route path="mypage" element={<MypageContainer />} />
             <Route path="posting" element={<Posting />} />
-            <Route path="noshow" element={<NoshowReport  users={noShowEx.users}/>} />
+            <Route path="noshow" element={<NoshowReport users={noShowEx.users}/>} />
             <Route path="noshowmodal" element={<NoshowModal />} />
         </Routes>
     </BrowserRouter>

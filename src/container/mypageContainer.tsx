@@ -8,7 +8,7 @@ import MenuFooter from "../components/menuFooter";
 
 export class MypageContainer extends Component{
     render() {
-        return(<MyPage babyak={11} major={"음악과 20"} nickname={"붐바음악"} noshow={1}/>);
+        return(<MyPage babyak={11} major={"융콘 20"} nickname={"이화융콘"} noshow={1}/>);
     }
 }
 

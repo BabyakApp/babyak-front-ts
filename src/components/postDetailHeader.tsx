@@ -10,7 +10,7 @@ export function PostDetailHeader({post, key}:PostProps){
             <button className={styles.BackButton}>
                 <Link to="/post"><img src= "img/backbutton.svg"/></Link>
             </button>
-            <span className={styles.DetailTitle}>{post.chatTitle}</span>
+            <span className={styles.DetailTitle}>{post.title}</span>
         </div>
     )
 }

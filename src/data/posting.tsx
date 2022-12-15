@@ -8,15 +8,16 @@ import {PostForm} from "../components/postList";
 export function Post(){
     let postData:PostForm = {
         chatroomid:11,
-        chatTitle:"api 테스트 게시글",
-        date:"월",
-        food:"양식",
-        time: "5",
-        people:3,
-        location:"정문",
-        content:"api 테스트 내용",
-        writerMajor:"컴공",
-        writerNickname:"테스트닉네임"
+        title:"api 테스트 게시글",
+        meetingDate:"월",
+        currentPeople:1,
+        preferredFood:"양식",
+        meetingTime: "5",
+        maxPeople:3,
+        meetingSite:"정문",
+        detail:"api 테스트 내용",
+        major:"컴공",
+        nickname:"테스트닉네임"
     }
     const [posting, setPosting] =useState("initial value");
     const test = () => setPosting(JSON.stringify("posting finish"));

@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 import styles from '../style/StyleSetting.module.css'
 import GlobalStyles from "../style/GlobalStyles";
 import {PostForm} from "./postList";
+import {postListTest} from "../data/testdata";
 
 
 export interface PostProps {
@@ -33,34 +34,33 @@ export function Post(data:PostProps){
     const [tab, setTab] = useState<string>('view');
     const onClick = () => setTab('click');
     const key = data.key;
-    return(<div>
-        <Link to={{pathname:`/postdetail`}}>
-        <button className={styles.PostBox} onClick={onClick}>
-        <div>
+    return(
+        <Link to="/postdetail" state={{post:data.post}} >
+            <button className={styles.PostBox} onClick={onClick}>
             <div>
-                <div className={styles.PostTitleBar}>
-                    <div className={styles.PostTime}>{data.post.date}  <img src= "img/listtimeicon.svg"/> {data.post.time}교시</div>
-                    <div className={styles.PostTitle}>{stringCut(data.post.chatTitle, strType.title)}</div>
+                <div>
+                    <div className={styles.PostTitleBar}>
+                        <div className={styles.PostTime}>{data.post.meetingDate}  <img src= "img/listtimeicon.svg"/> {data.post.meetingTime}</div>
+                        <div className={styles.PostTitle}>{stringCut(data.post.title, strType.title)}</div>
+                    </div>
+                    <div className={styles.PostContent}>{stringCut(data.post.detail, strType.content)}</div>
                 </div>
-                <div className={styles.PostContent}>{stringCut(data.post.content, strType.content)}</div>
+                <div className={styles.PostBottom}>
+                    <div className={styles.PostUser}>
+                        <img src= "img/profile.svg"/>
+                        <span className={styles.PostWriter}>{data.post.nickname}</span>
+                        <span className={styles.PostMajor}>|{data.post.major}</span>
+                    </div>
+                    <div className={styles.PostOption}>
+                        <span className={styles.PostPeople}><img src= "img/listpeopleicon.svg"/>{data.post.currentPeople}/{data.post.maxPeople}</span>
+                        <span className={styles.PostPeople}><img src= "img/listlocationicon.svg"/>{data.post.meetingSite}</span>
+                        <span className={styles.PostLocation}><img src= "img/listfoodicon.svg"/>{data.post.preferredFood}</span>
+                    </div>
+                </div>
             </div>
-            <div className={styles.PostBottom}>
-                <div className={styles.PostUser}>
-                    <img src= "img/profile.svg"/>
-                    <span className={styles.PostWriter}>{data.post.writerNickname}</span>
-                    <span className={styles.PostMajor}>|{data.post.writerMajor}</span>
-                </div>
-                <div className={styles.PostOption}>
-                    <span className={styles.PostPeople}><img src= "img/listpeopleicon.svg"/>1/{data.post.people}</span>
-                    <span className={styles.PostPeople}><img src= "img/listlocationicon.svg"/>{data.post.location}</span>
-                    <span className={styles.PostLocation}><img src= "img/listfoodicon.svg"/>{data.post.food}</span>
-                </div>
-
-            </div>
-        </div>
-        </button>
+            </button>
         </Link>
-        </div>)
+        )
 }
 
 export default Post;
