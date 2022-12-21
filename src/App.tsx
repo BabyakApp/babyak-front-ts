@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Post from "./components/postBox";
+import Post from "./components/PostList/postBox";
 import AllPostList from "./pages/allPostList";
 import {BrowserRouter, Route} from "react-router-dom";
 import GlobalStyles from './style/GlobalStyles';

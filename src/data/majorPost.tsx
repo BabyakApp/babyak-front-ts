@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ListProps, PostForm} from "../components/postList";
+import {ListProps, PostForm} from "../components/PostList/postList";
 
 
 export function MajorPost(postList:ListProps){

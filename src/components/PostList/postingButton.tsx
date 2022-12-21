@@ -1,6 +1,6 @@
 import * as React from "react";
-import styles from "../style/StyleSetting.module.css";
-import {PostingButtonContainer} from "../container/postingButtonContainer";
+import styles from "../../style/StyleSetting.module.css";
+import {PostingButtonContainer} from "../../container/postingButtonContainer";
 import {Link} from "react-router-dom";
 
 export function PostingButton(){

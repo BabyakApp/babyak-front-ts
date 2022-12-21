@@ -3,7 +3,7 @@ import AllPostList from "./allPostList";
 import {NoshowReportContainer} from "../container/noshowReportContainer";
 import {PostDetailContainer} from "../container/postDetailContainer";
 import {MypageContainer} from "../container/mypageContainer";
-import NoshowSubmit from "../components/noshowSubmit";
+import NoshowSubmit from "../components/Noshow/noshowSubmit";
 
 
 export function NoshowModal(){

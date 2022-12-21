@@ -1,5 +1,5 @@
 import {Component} from "react";
-import NoshowReport from "../components/noshowReport";
+import NoshowReport from "../components/Noshow/noshowReport";
 import {noShowEx} from "../data/testdata";
 import {connect} from "react-redux";
 import * as React from "react";

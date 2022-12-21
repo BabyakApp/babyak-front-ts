@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from "../style/StyleSetting.module.css";
+import styles from "../../style/StyleSetting.module.css";
 
 export function NoshowSubmit(){
     return(<div>

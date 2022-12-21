@@ -2,7 +2,7 @@ import * as React from "react";
 import {getPost, posting} from "./api";
 import {Component, useEffect, useState} from "react";
 import axios from "axios";
-import {PostForm} from "../components/postList";
+import {PostForm} from "../components/PostList/postList";
 
 
 export function Post(){

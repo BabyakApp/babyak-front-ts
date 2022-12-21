@@ -3,7 +3,7 @@ import {useState} from "react";
 import Post from "./postBox";
 import {Link} from "react-router-dom";
 import styled from "styled-components";
-import styles from '../style/StyleSetting.module.css'
+import styles from '../../style/StyleSetting.module.css'
 import PostFilterBar from "./postFilterBar";
 
 export interface headerProps{

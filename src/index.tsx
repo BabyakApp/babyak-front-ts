@@ -12,15 +12,15 @@ import MyPage from "./pages/myPage";
 import MajorPostList from "./pages/majorPostList";
 import Posting from "./pages/posting";
 import NoshowReportContainer from "./container/noshowReportContainer";
-import NoshowReport from "./components/noshowReport";
+import NoshowReport from "./components/Noshow/noshowReport";
 import GetPost from "./data/getPost";
 import Post from "./data/posting";
-import PostList from "./components/postList";
-import PostFilterBar from "./components/postFilterBar";
+import PostList from "./components/PostList/postList";
+import PostFilterBar from "./components/PostList/postFilterBar";
 import {PostDetailContainer} from "./container/postDetailContainer";
 import {MypageContainer} from "./container/mypageContainer";
 import NoshowModal from "./pages/noshowModal";
-import NoshowSubmit from "./components/noshowSubmit";
+import NoshowSubmit from "./components/Noshow/noshowSubmit";
 import {PostListContainer} from "./container/postListContainer";
 
 
