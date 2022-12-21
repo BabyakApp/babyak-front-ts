@@ -8,6 +8,8 @@ import { ChatContainer } from "../components/Chat/ChatContainer";
 import { type } from "os";
 import { MenuItem, Select } from "@mui/material";
 
+const StompJs = require("@stomp/stompjs");
+
 export interface IChatMessage {
   type: "recv" | "send";
   name: string;
@@ -15,7 +17,7 @@ export interface IChatMessage {
   time: string;
 }
 
-export function Chatting() {
+export default function Chatting() {
   const [items, setItems] = React.useState<IChatMessage[]>([
     {
       type: "recv",
@@ -37,6 +39,31 @@ export function Chatting() {
     },
   ]);
 
+  const client = React.useRef<any>({});
+
+  const connect = () => {
+    // 연결할 때
+    client.current = new StompJs.Client({
+      brokerURL: "ws://3.36.207.252:8080/ws-stomp",
+      onConnect: () => {
+        //subscribe(); // 연결 성공 시 구독하는 로직 실행
+        console.log("연결 성공");
+      },
+    });
+    client.current.activate(); // 클라이언트 활성화
+  };
+
+  const disconnect = () => {
+    // 연결이 끊겼을 때
+    console.log("연결 실패");
+  };
+
+  React.useEffect(() => {
+    connect();
+
+    return () => disconnect();
+  }, []);
+
   return (
     <div className={styles.ChattingWrapper}>
       <ChatHeader />
@@ -45,5 +72,3 @@ export function Chatting() {
     </div>
   );
 }
-
-export default Chatting;
