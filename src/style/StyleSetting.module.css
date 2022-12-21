@@ -92,7 +92,8 @@
     border-width: 0;
 }
 .PostFilterBar{
-    top: 11.5%;
+    top: 11.1%;
+    margin-left: 1.5%;
     background-color: #ffffff;
     position: fixed;
 }
@@ -126,7 +127,7 @@
     text-align: left;
 }
 .PostList {
-    padding-top: 48%;
+    padding-top: 46%;
     padding-bottom: 22%;
     background-color: #ffffff;
 }
@@ -181,12 +182,15 @@
     float: left;
 }
 .PostWriter{
-    margin: 0 0 0 2%;
+    margin: 0 0 0 4%;
+    padding-top: 9%;
     font-family: NotoSansKRBold;
     font-size: 10px;
     font-weight: bold;
+    float: left;
 }
 .PostMajor{
+    padding-top: 9%;
     font-family: NotoSansKRRegular;
     font-size: 10px;
     font-weight: normal;
@@ -232,7 +236,8 @@
     margin: 7% 0 0 5%;
 }
 .DetailProfileNickname{
-    margin-left: 1%;
+    margin-left: 1.5%;
+    padding: 3% 0.7% 0 0;
     flex-grow: 0;
     font-family: NotoSansKRBold;
     font-size: 10px;
@@ -243,9 +248,11 @@
     letter-spacing: normal;
     text-align: left;
     color: #000;
+    float: left;
 }
 .DetailProfileMajor{
     flex-grow: 0;
+    padding: 3%;
     font-family: NotoSansKRRegular;
     font-size: 10px;
     font-weight: normal;
@@ -259,7 +266,7 @@
 .DetailContent{
     width: 87%;
     height: 10%;
-    margin: 4% 8% 0% 8%;
+    margin: 4% 8% 0% 7%;
     font-family: NotoSansKRRegular;
     font-size: 10px;
     font-weight: normal;
@@ -331,7 +338,7 @@
     height: 10%;
     flex-grow: 0;
     margin: 0% 3% 30% 2%;
-    padding: 3% 1% 1% 1%;
+    padding: 2% 1% 1% 1%;
     border-radius: 13px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
     background-color: #fff;
@@ -349,7 +356,7 @@
 .InfoTitle{
     width: 20%;
     height: 30%;
-    margin: 1% 7% 0 7%;
+    margin: 1% 7% 0 6%;
     font-family: NotoSansKRMedium;
     font-size: 12px;
     font-weight: 500;
@@ -442,9 +449,11 @@
 }
 .MypageIcon{
     margin:0 2% 0 4%;
+    float: left;
 }
 .MypageInfo{
     font-family: NotoSansKRMedium;
+    padding-top: 1.5%;
     font-size: 12px;
     font-weight: 500;
     font-stretch: normal;
@@ -453,9 +462,11 @@
     letter-spacing: normal;
     text-align: left;
     color: #000;
+    float: left;
 }
 .MypageContent{
-    margin-left: 54%;
+    margin-left: 86%;
+    padding-top: 1.5%;
     font-family: NotoSansKRBold;
     font-size: 16px;
     font-weight: bold;
@@ -463,7 +474,7 @@
     font-style: normal;
     line-height: 0.63;
     letter-spacing: normal;
-    text-align: right;
+    text-align: center;
     color: #000;
 }
 .MypageTimetable{
@@ -471,19 +482,38 @@
     width: 100%;
     object-fit: cover;
 }
-.NoshowreportBox{
+.NoshowreportTopBox{
     background-color: white;
     width: 90%;
-    height: 40%;
+    height: 10%;
     margin: 0 5% 0 5%;
     border-radius: 11px;
-    position: fixed;
-    z-index: 1;
+    z-index: 2;
+    float: left;
+
+}
+.NoshowreportMiddleBox{
+    background-color: white;
+    width: 90%;
+    height: 8%;
+    margin: 0 0 0 5%;
+    padding: 0 0 0 0;
+    float: left;
+
+}
+.NoshowreportBottomBox{
+    background-color: white;
+    width: 90%;
+    height: 10%;
+    margin: 0 5% 0 5%;
+    padding-top: 10%;
+    border-radius: 11px;
+    z-index: 2;
 
 }
 .NoshowreportTitle{
     padding-top: 6%;
-    margin: 1% 5% 5% 35%;
+    margin: 1% 5% 0 8%;
     font-family: NotoSansKRMedium;
     font-size: 12px;
     font-weight: 500;
@@ -493,11 +523,11 @@
     letter-spacing: normal;
     text-align: center;
     color: #151515;
-    position: fixed;
+    z-index: 1;
 }
 .NoshowreportContent{
-    margin: 17% 0 0 5%;
-    padding: 0 10% 0 10%;
+    margin: 8% 0 0 5%;
+    padding: 0 10% 3% 10%;
     font-family: NotoSansKRRegular;
     font-size: 10px;
     font-weight: normal;
@@ -507,6 +537,7 @@
     letter-spacing: normal;
     text-align: center;
     color: #5b5b5b;
+    z-index: 1;
 
 }
 .NoshowreportUserItem{
@@ -523,17 +554,18 @@
     letter-spacing: normal;
     text-align: center;
     color: #151515;
+    float: left;
 }
 .NoshowreportSubmitButton{
-    width: 84%;
-    height: 6%;
-    margin: 8% 0 60% 3%;
-    padding: 0 10% 6% 0;
+    width: 90%;
+    height: 7%;
+    margin: 10% 0 4% 5%;
+    padding: 3.5% 0 3.5% 0;
     border-width: 0;
     border-radius: 11px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffebf0;
-    position: fixed;
+    z-index: 1;
 }
 .NoshowreportSubmitButtonClick{
     width: 84%;
@@ -544,7 +576,7 @@
     border-radius: 11px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
     background-color: #ff366a;
-    position: fixed;
+    z-index: 1;
 }
 .NoshowreportButtonText{
     flex-grow: 0;
@@ -557,16 +589,16 @@
     letter-spacing: normal;
     text-align: center;
     color: #151515;
-    position: fixed;
+    z-index: 1;
 }
 .NoshowreportBackground{
     height: 100%;
     width: 100%;
     margin: 0 0 0 0;
-    padding: 45% 0 97% 0;
+    padding: 45% 0 0% 0;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
-    z-index: 2;
+    z-index: 3;
 }
 .NoshowSubmit{
     flex-grow: 0;

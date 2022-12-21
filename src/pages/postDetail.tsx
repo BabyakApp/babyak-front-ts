@@ -1,24 +1,24 @@
 import * as React from "react";
 import {useState} from "react";
-import Post, {PostProps} from "../components/postBox";
-import PostDetailHeader from "../components/postDetailHeader";
+import Post, {PostProps} from "../components/PostList/postBox";
+import PostDetailHeader from "../components/PostDetail/postDetailHeader";
 import styled from "styled-components";
 import GlobalStyles from "../style/GlobalStyles";
 import styles from '../style/StyleSetting.module.css'
 import MenuFooter from "../components/menuFooter";
 import {Link} from "react-router-dom";
-import WishButton from "../components/wishButton";
-import Info from "../components/info";
-import DetailInfo from "../components/detailInfo";
+import WishButton from "../components/PostDetail/wishButton";
+import Info from "../components/PostDetail/info";
+import DetailInfo from "../components/PostDetail/detailInfo";
 
 
 export function PostDetail({post, key}: PostProps){
     return<div>
         <PostDetailHeader post={post} key={key} />
         <div className={styles.DetailProfile}>
-            <img src= "img/detailprofile.svg"/>
-            <span className={styles.DetailProfileNickname}>{post.nickname}</span>
-            <span className={styles.DetailProfileMajor}> |{post.major}</span>
+            <img style={{ float:"left"}} src= "img/detailprofile.svg"/>
+            <div className={styles.DetailProfileNickname}>{post.nickname}</div>
+            <div className={styles.DetailProfileMajor}>|{post.major}</div>
         </div>
         <div className={styles.DetailContent}>{post.detail}</div>
         <DetailInfo post={post} key={key} />
