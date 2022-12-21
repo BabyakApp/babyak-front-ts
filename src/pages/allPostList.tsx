@@ -1,18 +1,19 @@
 import React, {Component, useCallback, useEffect, useState} from "react";
 import styled from 'styled-components';
-import Post from "../components/postBox";
-import {PostProps} from "../components/postBox";
+import Post from "../components/PostList/postBox";
+import {PostProps} from "../components/PostList/postBox";
 import MenuFooter from "../components/menuFooter";
-import PostListHeader from "../components/postListHeader";
+import PostListHeader from "../components/PostList/postListHeader";
 import PostingButton, {PostingButtonContainer} from "../container/postingButtonContainer";
-import PostList, {GetPostListData, jsontoForm, ListProps, PostForm} from "../components/postList";
+import PostList, {ListProps, PostForm} from "../components/PostList/postList";
 import {postListTest} from "../data/testdata";
-import PostListContainer from "../components/postList";
+import PostListContainer from "../components/PostList/postList";
 import {connect} from "react-redux";
 import GetPost from "../data/getPost";
 import NoshowReportContainer from "../container/noshowReportContainer";
-import PostFilterBar, {filterValue} from "../components/postFilterBar";
+import PostFilterBar, {filterValue} from "../components/PostList/postFilterBar";
 import FilteringPost from "../data/filteringPost";
+import {GetPostListData, jsontoForm} from "../data/api";
 
 // let postdata = GetPost().postData;
 // let postList:ListProps = {
@@ -22,26 +23,33 @@ import FilteringPost from "../data/filteringPost";
 // };
 export function AllPostList(){
     const [filteredList, setFilteredList] = useState(postListTest)
-    const [result, setResult] = useState(null);
-    // let res = GetPostListData().then((response)=>{
-    //         setResult(response)
-    //         return response
-    //     }
-    // );
-    // if(result){
-    //     let posts:ListProps = jsontoForm(result);
-    //     setFilteredList(posts)
-    // }
+    const [res, setRes] = useState(null);
+    const [sv, setSv] = useState(postListTest)
+    const [loading, setLoading] = useState(true);
+
+    let resonse = useEffect(() => {
+        GetPostListData().then((response)=>{
+            setRes(response)
+            setLoading(false)
+            return response
+        })
+        if(res){
+            let posts:ListProps = jsontoForm(res);
+            setFilteredList(posts)
+            setSv(posts)
+        }
+        console.log("filtered",filteredList)
+        },[loading]);
+
     function filterTest(value:filterValue,checked:any,postList:ListProps){
-        postList = FilteringPost(value,checked,filteredList)
-        console.log(postList)
-        setFilteredList(postList)
+            let newpostList = FilteringPost(value,checked,sv)
+            setFilteredList(newpostList)
     }
 
     return(
         <div>
             <PostListHeader major={filteredList.major} type={false} />
-            <PostFilterBar propFunction={filterTest} postlist={postListTest.posts} />
+            <PostFilterBar propFunction={filterTest} postlist={filteredList.posts} />
             <PostListContainer major={filteredList.major} posts={filteredList.posts} userid={postListTest.userid} />
             <PostingButtonContainer />
             <MenuFooter type={0}/>
