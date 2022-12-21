@@ -21,6 +21,7 @@ import { PostDetailContainer } from "./container/postDetailContainer";
 import { MypageContainer } from "./container/mypageContainer";
 import NoshowModal from "./pages/noshowModal";
 import SignUp from "pages/signUp";
+import Redirect from "pages/oauth/google/redirect";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -50,6 +51,7 @@ root.render(
       <Route path="filterbar" element={<PostFilterBar />} />
       <Route path="noshowmodal" element={<NoshowModal />} />
       <Route path="signup" element={<SignUp />} />
+      <Route path="oauth/google/redirect" element={<Redirect />} />
     </Routes>
   </BrowserRouter>
 );
