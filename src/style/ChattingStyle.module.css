@@ -1,0 +1,148 @@
+.ChattingWrapper {
+  height: 100vh;
+}
+
+.ChattingHeader {
+  height: 50px;
+  display: flex;
+}
+
+.ChattingHeaderBack {
+  width: 60px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff366a;
+}
+
+.ChattingHeaderArrowLeft {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.ChattingHeaderTitle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: NotoSansKRBold;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ChattingHeaderNumOfPeople {
+  width: 60px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChattingHeaderNumOfPeopleIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.ChattingContainer {
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+.ChattingInput {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChattingExitIcon {
+  width: 20px;
+  height: 20px;
+  color: #ff366a;
+}
+
+.ChattingInputContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChattingMessage {
+  display: flex;
+}
+
+.ChattingProfile {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #eeeeee;
+}
+
+.ChattingContent {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.ChattingContentName {
+  font-family: NotoSansKRBold;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ChattingContentText {
+  font-family: NotoSansKRRegular;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+.ChattingContentTime {
+  text-align: right;
+  font-size: 12px;
+}
+
+/* Path: src\style\ChattingStyle.module.css */
+
+.ChattingMessageSend {
+  display: flex;
+}
+
+.ChattingProfileSend {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #ff92ae;
+}
+
+.ChattingContentSend {
+  flex: 1;
+  padding-left: 30px;
+}
+
+.ChattingContentSendName {
+  text-align: right;
+  font-family: NotoSansKRBold;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ChattingContentSendText {
+  font-family: NotoSansKRRegular;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  background-color: #ffebf0;
+  padding: 5px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+.ChattingContentSendTime {
+  font-size: 12px;
+}

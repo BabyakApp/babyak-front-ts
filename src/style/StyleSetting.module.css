@@ -1,0 +1,635 @@
+@font-face {
+    font-family: "NotoSansKRRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/NotoSansKR-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "NotoSansKRBold";
+    font-style: normal;
+    src: url("../fonts/NotoSansKR-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "NotoSansKRLight";
+    src: url("../fonts/NotoSansKR-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: "NotoSansKRMedium";
+    src: url("../fonts/NotoSansKR-Medium.otf") format("opentype");
+}
+.Header{
+    width: 100%;
+    position: fixed;
+    background-color: #ffffff;
+}
+
+.HeaderTitle{
+    height: 17px;
+    margin: 6% 20px 6% 4%;
+    font-family: NotoSansKRBold;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.06;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    top:0;
+}
+
+.HeaderButtonDefault{
+    width: 45%;
+    height: 5%;
+    margin: 1% 0.7% 1% 3%;
+    padding: 0 0 0.5% 0;
+    background-color: #ffffff;
+    border-radius: 1px;
+    border-width: 0;
+    font-family: NotoSansKRBold;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    top:0;
+}
+.HeaderButtonSelected{
+    width: 45%;
+    height: 5%;
+    margin: 1% 0.7% 1% 3%;
+    padding: 0 0 0.5% 0;
+    background-color: #ffffff;
+    border-radius: 1px;
+    border-width: 0;
+    border-bottom-width: 2px;
+    border-color: #ff366a;
+    border-bottom-style: solid;
+    font-family: NotoSansKRBold;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    top:0;
+
+}
+.PostFilter{
+    width: 16.5%;
+    height: 10%;
+    flex-grow: 0;
+    margin: 7px 1% 1% 2%;
+    padding: 7.6px 0 2% 0.5%;
+    border-radius: 11px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    border-width: 0;
+}
+.PostFilterBar{
+    top: 11.1%;
+    margin-left: 1.5%;
+    background-color: #ffffff;
+    position: fixed;
+}
+
+.MenuFooter{
+    width: 100%;
+    height: 4%;
+    bottom: 0;
+    padding: 5% 0% 10% 0%;
+    justify-content: space-between;
+    object-fit: contain;
+    position: fixed;
+    background-color: #ffffff;
+
+}
+.MenuButton{
+    background-color: #fff;
+    border-width:0;
+    margin: 10px 7% 10px 14%;
+}
+.PostBox {
+    width: 94%;
+    height: 120px;
+    flex-grow: 0;
+    margin: 0 0 3% 3%;
+    padding: 2% 3% 2% 3%;
+    border-radius: 13px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    border-width:0;
+    text-align: left;
+}
+.PostList {
+    padding-top: 46%;
+    padding-bottom: 22%;
+    background-color: #ffffff;
+}
+.PostTitle{
+    width: 65%;
+    flex-grow: 0;
+    font-family: NotoSansKRBold;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+.PostTime{
+    width: 25%;
+    flex-grow: 0;
+    font-family: NotoSansKRMedium;
+    font-size: 10px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: right;
+    color: #000;
+    float: right;
+}
+.PostTitleBar{
+    padding: 0 0 0 0;
+}
+.PostContent{
+    width: 67%;
+    margin: 0.5% 0 0% 0;
+    font-family: NotoSansKRRegular;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+
+}
+.PostBottom{
+    margin: 10% 0 0 0;
+}
+.PostUser{
+    width: 37%;
+    float: left;
+}
+.PostWriter{
+    margin: 0 0 0 4%;
+    padding-top: 9%;
+    font-family: NotoSansKRBold;
+    font-size: 10px;
+    font-weight: bold;
+    float: left;
+}
+.PostMajor{
+    padding-top: 9%;
+    font-family: NotoSansKRRegular;
+    font-size: 10px;
+    font-weight: normal;
+}
+.PostOption{
+    justify-content: space-between;
+    margin-left: 60%;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-family: NotoSansKRRegular;
+    font-size: 10px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: right;
+    color: #000;
+
+}
+.PostPeople{
+    margin-right: 4%;
+}
+.PostLocation{
+    margin-right: 4%;
+}
+.PostFood{
+}
+.DetailTitle{
+    height: 17px;
+    padding: 0 0 0 4%;
+    font-family: NotoSansKRBold;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.06;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}
+.DetailProfile{
+    margin: 7% 0 0 5%;
+}
+.DetailProfileNickname{
+    margin-left: 1.5%;
+    padding: 3% 0.7% 0 0;
+    flex-grow: 0;
+    font-family: NotoSansKRBold;
+    font-size: 10px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    float: left;
+}
+.DetailProfileMajor{
+    flex-grow: 0;
+    padding: 3%;
+    font-family: NotoSansKRRegular;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+.DetailContent{
+    width: 87%;
+    height: 10%;
+    margin: 4% 8% 0% 7%;
+    font-family: NotoSansKRRegular;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+.DetailInfo{
+    width: 90%;
+    height: 60%;
+    margin: 5% 5% 14px 5%;
+    border-radius: 20px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    border-width:0;
+}
+.DetailInfoBox{
+    width: 37%;
+    margin: 4% 4% 3% 4%;
+    background-color: #f9f9f9;
+    border-width: 0;
+}
+.DetailInfoPart{
+    font-family: NotoSansKRRegular;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b5b5b;
+}
+.DetailInfoOption{
+    flex-grow: 0;
+    font-family: NotoSansKRMedium;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}
+.ParticipationButton{
+    width: 76%;
+    height: 48px;
+    margin: 13% 1% 30% 4%;
+    padding: 14px 65.2px 14px 74.3px;
+    border-radius: 12px;
+    background-image: linear-gradient(103deg, #ff366a 10%, #ff5c5c 91%);
+    font-family: NotoSansKRBold;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    border-width:0;
+}
+.WishButton{
+    width: 13%;
+    height: 10%;
+    flex-grow: 0;
+    margin: 0% 3% 30% 2%;
+    padding: 2% 1% 1% 1%;
+    border-radius: 13px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    font-family: NotoSansKRMedium;
+    font-size: 10px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    border-width:0;
+}
+.InfoTitle{
+    width: 20%;
+    height: 30%;
+    margin: 1% 7% 0 6%;
+    font-family: NotoSansKRMedium;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+}
+.Info{
+    width: 94%;
+    height: 100px;
+    margin: 0 6% 1% 7%;
+    font-family: NotoSansKRRegular;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+.BackButton{
+    margin: 5% 0 0 1%;
+    background-color: #ffffff;
+    border-width:0;
+}
+.PostingButton{
+    bottom: 12%;
+    position: fixed;
+    margin-left: 80%;
+}
+.MypageHeader{
+    width: 100%;
+    height: 10%;
+    padding-top: 8%;
+    font-family: NotoSansKRBold;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.06;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000
+
+}
+.MypagePic{
+    padding-left: 13%;
+    margin-bottom: 2%;
+}
+.MypageNick{
+    font-family: NotoSansKRBold;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.71;
+    letter-spacing: normal;
+    text-align: right;
+    color: #000;
+}
+.MypageMajor{
+    font-family: NotoSansKRRegular;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+.MypageBox{
+    width: 90%;
+    height: 8%;
+    margin: 4% 0 0 16px;
+    padding: 17px 2% 18.2px 1%;
+    border-radius: 20px;
+    border: solid 1px rgba(255, 146, 174, 0.5);
+    background-color: white;
+    text-align: left;
+}
+.MypageProfile{
+    margin: 10% 0 0 0;
+    padding-left: 35%;
+    background-color: white;
+}
+.MypageIcon{
+    margin:0 2% 0 4%;
+    float: left;
+}
+.MypageInfo{
+    font-family: NotoSansKRMedium;
+    padding-top: 1.5%;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.83;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    float: left;
+}
+.MypageContent{
+    margin-left: 86%;
+    padding-top: 1.5%;
+    font-family: NotoSansKRBold;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.63;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}
+.MypageTimetable{
+    margin-top: 2%;
+    width: 100%;
+    object-fit: cover;
+}
+.MypageImageUpload{
+    margin-left: 2%;
+    border-radius: 5%;
+    border-width: 0;
+    width: 96%;
+    padding: 50% 0 50% 0;
+    background-color: #cccccc;
+
+}
+.WishList{
+    margin-top: 12%;
+}
+.NoshowreportTopBox{
+    background-color: white;
+    width: 90%;
+    height: 10%;
+    margin: 0 5% 0 5%;
+    border-radius: 11px;
+    z-index: 2;
+    float: left;
+
+}
+.NoshowreportMiddleBox{
+    background-color: white;
+    width: 90%;
+    height: 8%;
+    margin: 0 0 0 5%;
+    padding: 0 0 0 0;
+    float: left;
+
+}
+.NoshowreportBottomBox{
+    background-color: white;
+    width: 90%;
+    height: 10%;
+    margin: 0 5% 0 5%;
+    padding-top: 10%;
+    border-radius: 11px;
+    z-index: 2;
+
+}
+.NoshowreportTitle{
+    padding-top: 6%;
+    margin: 1% 5% 0 8%;
+    font-family: NotoSansKRMedium;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #151515;
+    z-index: 1;
+}
+.NoshowreportContent{
+    margin: 8% 0 0 5%;
+    padding: 0 10% 3% 10%;
+    font-family: NotoSansKRRegular;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b5b5b;
+    z-index: 1;
+
+}
+.NoshowreportUserItem{
+    margin: 8% 0 0 20%;
+}
+.NoshowreportNickname{
+    margin-right: 45%;
+    font-family: NotoSansKRMedium;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #151515;
+    float: left;
+}
+.NoshowreportSubmitButton{
+    width: 90%;
+    height: 7%;
+    margin: 10% 0 4% 5%;
+    padding: 3.5% 0 3.5% 0;
+    border-width: 0;
+    border-radius: 11px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffebf0;
+    z-index: 1;
+}
+.NoshowreportSubmitButtonClick{
+    width: 84%;
+    height: 6%;
+    margin: 8% 0 60% 3%;
+    padding: 0 10% 6% 0;
+    border-width: 0;
+    border-radius: 11px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ff366a;
+    z-index: 1;
+}
+.NoshowreportButtonText{
+    flex-grow: 0;
+    font-family: NotoSansKRBold;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #151515;
+    z-index: 1;
+}
+.NoshowreportBackground{
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 45% 0 0% 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 3;
+}
+.NoshowSubmit{
+    flex-grow: 0;
+    margin: 30% 8% 0 8%;
+    padding: 15% 16% 15% 16%;
+    border-radius: 11px;
+    border-width: 0;
+    background-color: #ffffff;
+    position: fixed;
+}
+
+.NoshowSubmitText{
+    font-family: NotoSansKRRegular;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #151515;
+}
