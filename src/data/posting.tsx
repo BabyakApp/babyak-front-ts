@@ -7,7 +7,7 @@ import {PostForm} from "../components/PostList/postList";
 
 export function Post(){
     let postData:PostForm = {
-        chatroomid:11,
+        postid:11,
         title:"api 테스트 게시글",
         meetingDate:"월",
         currentPeople:1,

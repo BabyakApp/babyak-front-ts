@@ -22,6 +22,7 @@ import {MypageContainer} from "./container/mypageContainer";
 import NoshowModal from "./pages/noshowModal";
 import NoshowSubmit from "./components/Noshow/noshowSubmit";
 import {PostListContainer} from "./container/postListContainer";
+import WishListPage from "./pages/wishListPage";
 
 
 const root = ReactDOM.createRoot(
@@ -36,6 +37,7 @@ root.render(
             <Route path="majorpost" element={<MajorPostList />} />
             <Route path="chatting" element={<Chatting />} />
             <Route path="mypage" element={<MypageContainer />} />
+            <Route path="wishlist" element={<WishListPage />} />
             <Route path="posting" element={<Posting />} />
             <Route path="noshow" element={<NoshowReport users={noShowEx.users}/>} />
             <Route path="noshowmodal" element={<NoshowModal />} />

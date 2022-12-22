@@ -482,6 +482,18 @@
     width: 100%;
     object-fit: cover;
 }
+.MypageImageUpload{
+    margin-left: 2%;
+    border-radius: 5%;
+    border-width: 0;
+    width: 96%;
+    padding: 50% 0 50% 0;
+    background-color: #cccccc;
+
+}
+.WishList{
+    margin-top: 12%;
+}
 .NoshowreportTopBox{
     background-color: white;
     width: 90%;

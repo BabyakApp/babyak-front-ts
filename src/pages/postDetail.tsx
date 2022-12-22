@@ -25,8 +25,12 @@ export function PostDetail({post, key}: PostProps){
         <div>
             <Info />
             <div>
-                <Link to="/chatting"><button className={styles.ParticipationButton}>참여하기</button></Link>
-                <WishButton />
+                <Link to="/chatting" onClick={()=>{
+                    localStorage.setItem("date",post.meetingDate)
+                    localStorage.setItem("time",post.meetingTime)
+                    console.log(post.meetingDate, post.meetingTime)
+                    }}><button className={styles.ParticipationButton}>참여하기</button></Link>
+                <WishButton key={key} post={post}/>
             </div>
         </div>
         <MenuFooter type={0}/>

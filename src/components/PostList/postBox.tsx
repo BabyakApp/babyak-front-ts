@@ -41,7 +41,7 @@ export function Post(data:PostProps){
     const date = month+"."+day+"."+dayOfWeek[dof];
     const key = data.key;
     return(
-        <Link to="/postdetail" state={{post:data.post}} >
+        <Link to="/postdetail" state={{post:data.post, key:data.key}} >
             <button className={styles.PostBox} onClick={onClick}>
             <div>
                 <div>

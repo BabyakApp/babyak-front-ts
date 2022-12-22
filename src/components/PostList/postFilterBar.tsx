@@ -160,13 +160,13 @@ export function PostFilterBar(props:any){
                 sx={filterSelect}
             >
                 <MenuItem value="" sx={filterMenuitem} style={filterMenuitemText}>-</MenuItem>
-                <MenuItem value={"월요일"} sx={filterMenuitem} style={filterMenuitemText}>월요일</MenuItem>
-                <MenuItem value={"화요일"} sx={filterMenuitem} style={filterMenuitemText}>화요일</MenuItem>
-                <MenuItem value={"수요일"} sx={filterMenuitem} style={filterMenuitemText}>수요일</MenuItem>
-                <MenuItem value={"목요일"} sx={filterMenuitem} style={filterMenuitemText}>목요일</MenuItem>
-                <MenuItem value={"금요일"} sx={filterMenuitem} style={filterMenuitemText}>금요일</MenuItem>
-                <MenuItem value={"토요일"} sx={filterMenuitem} style={filterMenuitemText}>토요일</MenuItem>
-                <MenuItem value={"일요일"} sx={filterMenuitem} style={filterMenuitemText}>일요일</MenuItem>
+                <MenuItem value={"0"} sx={filterMenuitem} style={filterMenuitemText}>월요일</MenuItem>
+                <MenuItem value={"1"} sx={filterMenuitem} style={filterMenuitemText}>화요일</MenuItem>
+                <MenuItem value={"2"} sx={filterMenuitem} style={filterMenuitemText}>수요일</MenuItem>
+                <MenuItem value={"3"} sx={filterMenuitem} style={filterMenuitemText}>목요일</MenuItem>
+                <MenuItem value={"4"} sx={filterMenuitem} style={filterMenuitemText}>금요일</MenuItem>
+                <MenuItem value={"5"} sx={filterMenuitem} style={filterMenuitemText}>토요일</MenuItem>
+                <MenuItem value={"6"} sx={filterMenuitem} style={filterMenuitemText}>일요일</MenuItem>
             </Select>
         </FormControl>
         <FormControl>
@@ -181,16 +181,16 @@ export function PostFilterBar(props:any){
                 <MenuItem value="" sx={filterMenuitem} style={filterMenuitemText}>
                     <em>-</em>
                 </MenuItem>
-                <MenuItem value={"1"} sx={filterMenuitem} style={filterMenuitemText}>1교시</MenuItem>
-                <MenuItem value={"2"} sx={filterMenuitem} style={filterMenuitemText}>2교시</MenuItem>
-                <MenuItem value={"3"} sx={filterMenuitem} style={filterMenuitemText}>3교시</MenuItem>
-                <MenuItem value={"4"} sx={filterMenuitem} style={filterMenuitemText}>4교시</MenuItem>
-                <MenuItem value={"5"} sx={filterMenuitem} style={filterMenuitemText}>5교시</MenuItem>
-                <MenuItem value={"6"} sx={filterMenuitem} style={filterMenuitemText}>6교시</MenuItem>
-                <MenuItem value={"7"} sx={filterMenuitem} style={filterMenuitemText}>7교시</MenuItem>
-                <MenuItem value={"8"} sx={filterMenuitem} style={filterMenuitemText}>8교시</MenuItem>
-                <MenuItem value={"9"} sx={filterMenuitem} style={filterMenuitemText}>9교시</MenuItem>
-                <MenuItem value={"10"} sx={filterMenuitem} style={filterMenuitemText}>10교시</MenuItem>
+                <MenuItem value={"1교시"} sx={filterMenuitem} style={filterMenuitemText}>1교시</MenuItem>
+                <MenuItem value={"2교시"} sx={filterMenuitem} style={filterMenuitemText}>2교시</MenuItem>
+                <MenuItem value={"3교시"} sx={filterMenuitem} style={filterMenuitemText}>3교시</MenuItem>
+                <MenuItem value={"4교시"} sx={filterMenuitem} style={filterMenuitemText}>4교시</MenuItem>
+                <MenuItem value={"5교시"} sx={filterMenuitem} style={filterMenuitemText}>5교시</MenuItem>
+                <MenuItem value={"6교시"} sx={filterMenuitem} style={filterMenuitemText}>6교시</MenuItem>
+                <MenuItem value={"7교시"} sx={filterMenuitem} style={filterMenuitemText}>7교시</MenuItem>
+                <MenuItem value={"8교시"} sx={filterMenuitem} style={filterMenuitemText}>8교시</MenuItem>
+                <MenuItem value={"9교시"} sx={filterMenuitem} style={filterMenuitemText}>9교시</MenuItem>
+                <MenuItem value={"10교시"} sx={filterMenuitem} style={filterMenuitemText}>10교시</MenuItem>
             </Select>
         </FormControl>
         <FormControl>

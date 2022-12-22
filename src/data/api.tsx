@@ -50,6 +50,7 @@ export function jsontoForm(jsonfile:Array<any>){
         major: "융콘",
         posts: posts
     }
+    console.log(posts)
     return dataList;
 }
 
@@ -65,5 +66,6 @@ export async function GetPostListData(){
         console.log("api error")
     }
 }
+
 
 

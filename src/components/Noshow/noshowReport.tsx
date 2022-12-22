@@ -3,6 +3,7 @@ import styles from "../../style/StyleSetting.module.css";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import NoshowSubmit from "./noshowSubmit";
+import {user} from "../../data/noshow";
 
 export interface noshowcheck{
     nick:string,
@@ -20,6 +21,9 @@ export function NoshowReport(member:noshowProps){
     const [noshowCheck, setNoshowCheck] = useState([false,false,false]);
     const [list, setList] = useState(['']);
     const [submit, setSubmit] = useState(false);
+    let userEx = {
+        email: "abc1234@ewhain.net"
+    }
     const test = () => {
         setTab(JSON.stringify("posting finish"));
         setSubmit(true)
@@ -29,15 +33,14 @@ export function NoshowReport(member:noshowProps){
         const noshowapi = async() => {
             console.log("useEffect 실행");
             try{
-                const response = await axios.post("http://localhost:8080/posting", list);
-                console.log(response.data)
+                const response = await axios.put("http://3.36.207.252:8080/user/noshow", userEx);
+                console.log(response)
             } catch (e) {
                 console.log("api connect error")
             }
         }
         noshowapi();
     },[tab]);
-    const n = member.users.length;
 
     return<div className={styles.NoshowreportBackground}>
         {!submit&&<div>

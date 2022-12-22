@@ -6,7 +6,7 @@ import {postListTest} from "../../data/testdata";
 
 
 export interface PostForm{
-    chatroomid: number,
+    postid: number,
     meetingDate: string,
     title: string,
     meetingTime: string,
@@ -30,7 +30,7 @@ export interface ListProps extends UserProps{
 export function PostList(postList:ListProps){
 
     return<div className={styles.PostList}>
-        {postList.posts&&postList.posts.map((post, key = post.chatroomid) => (
+        {postList.posts&&postList.posts.map((post, key = post.postid) => (
             <Post post={post} key={key} />
         ))}
     </div>

@@ -14,7 +14,15 @@ export function FilteringPost(value:filterValue,checked:any,postList:ListProps){
             break;
         }
         for(let ch of checked){
-            if(post[ch as keyof typeof post] != value[ch as keyof typeof value]){
+            if(ch=="meetingDate"){
+                const year = post.meetingDate.substring(0,4)
+                const month = post.meetingDate.substring(5,7)
+                const day = post.meetingDate.substring(8,10)
+                const dof = new Date(`${year}-${month}-${day}`).getDay().toString()
+                if(dof != value[ch as keyof typeof value])
+                postCheck = false;
+            }
+            else if(post[ch as keyof typeof post] != value[ch as keyof typeof value]){
                 postCheck = false;
             }
         }

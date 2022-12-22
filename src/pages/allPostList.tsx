@@ -14,6 +14,7 @@ import NoshowReportContainer from "../container/noshowReportContainer";
 import PostFilterBar, {filterValue} from "../components/PostList/postFilterBar";
 import FilteringPost from "../data/filteringPost";
 import {GetPostListData, jsontoForm} from "../data/api";
+import EndTime from "../data/endTime";
 
 // let postdata = GetPost().postData;
 // let postList:ListProps = {
@@ -40,6 +41,7 @@ export function AllPostList(){
         }
         console.log("filtered",filteredList)
         },[loading]);
+
 
     function filterTest(value:filterValue,checked:any,postList:ListProps){
             let newpostList = FilteringPost(value,checked,sv)
