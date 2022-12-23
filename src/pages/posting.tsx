@@ -1,10 +1,14 @@
+import PostingContainer from "components/Posting/PostingContainer";
+import { PostingHeader } from "components/Posting/PostingHeader";
 import * as React from "react";
 
-export function Posting(){
-    return(
-        <div>
-            글 작성 페이지
-        </div>)
+export function Posting() {
+  return (
+    <div>
+      <PostingHeader />
+      <PostingContainer />
+    </div>
+  );
 }
 
 export default Posting;

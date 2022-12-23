@@ -3,71 +3,13 @@ import styles from "../../style/ChattingStyle.module.css";
 import { ArrowLeft, User, LogOut, Database } from "react-feather";
 import { ChatMessage } from "./ChatMessage";
 import { ChatMessageSend } from "./ChatMessageSend";
+import { IChatMessage } from "pages/chatting";
 
-export function ChatContainer() {
-  const items = [
-    {
-      type: "recv",
-      name: "사과도리|사회학과21",
-      text: "안녕하세요",
-      time: "오후 2시 3분",
-    },
-    {
-      type: "recv",
-      name: "사과도리|사회학과21",
-      text: "안녕하세요222",
-      time: "오후 2시 3분",
-    },
-    {
-      type: "send",
-      name: "사과도리|사회학과21",
-      text: "안녕하세요333",
-      time: "오후 2시 3분",
-    },
-    {
-      type: "recv",
-      name: "사과도리|사회학과21",
-      text: "안녕하세요",
-      time: "오후 2시 3분",
-    },
-    {
-      type: "recv",
-      name: "사과도리|사회학과21",
-      text: "안녕하세요222",
-      time: "오후 2시 3분",
-    },
-    {
-      type: "send",
-      name: "사과도리|사회학과21",
-      text: "안녕하세요333",
-      time: "오후 2시 3분",
-    },
-    {
-      type: "send",
-      name: "사과도리|사회학과21",
-      text: "안녕하세요333",
-      time: "오후 2시 3분",
-    },
-    {
-      type: "send",
-      name: "사과도리|사회학과21",
-      text: "안녕하세요333",
-      time: "오후 2시 3분",
-    },
-    {
-      type: "send",
-      name: "사과도리|사회학과21",
-      text: "안녕하세요333",
-      time: "오후 2시 3분",
-    },
-    {
-      type: "send",
-      name: "사과도리|사회학과21",
-      text: "안녕하세요333",
-      time: "오후 2시 3분",
-    },
-  ];
+interface IChatContainerProps {
+  items: IChatMessage[];
+}
 
+export function ChatContainer({ items }: IChatContainerProps) {
   return (
     <div className={styles.ChattingContainer}>
       {items.map((item) =>

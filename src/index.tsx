@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AllPostList from "./pages/allPostList";
 import PostDetail from "./pages/postDetail";
-import {postListTest, noShowEx} from "data/testdata"
+import { postListTest, noShowEx } from "data/testdata";
 import Chatting from "./pages/chatting";
 import MyPage from "./pages/myPage";
 import MajorPostList from "./pages/majorPostList";
@@ -23,10 +23,12 @@ import NoshowModal from "./pages/noshowModal";
 import NoshowSubmit from "./components/Noshow/noshowSubmit";
 import {PostListContainer} from "./container/postListContainer";
 import WishListPage from "./pages/wishListPage";
+import SignUp from "pages/signUp";
+import Redirect from "pages/oauth/google/redirect";
 
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
     <BrowserRouter>
@@ -41,6 +43,8 @@ root.render(
             <Route path="posting" element={<Posting />} />
             <Route path="noshow" element={<NoshowReport users={noShowEx.users}/>} />
             <Route path="noshowmodal" element={<NoshowModal />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="oauth/google/redirect" element={<Redirect />} />
         </Routes>
     </BrowserRouter>
 );

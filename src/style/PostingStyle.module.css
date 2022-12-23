@@ -1,13 +1,13 @@
-.ChattingWrapper {
+.PostingWrapper {
   height: 100vh;
 }
 
-.ChattingHeader {
+.PostingHeader {
   height: 50px;
   display: flex;
 }
 
-.ChattingHeaderBack {
+.PostingHeaderBack {
   width: 60px;
   height: 50px;
   display: flex;
@@ -16,13 +16,13 @@
   color: #ff366a;
 }
 
-.ChattingHeaderArrowLeft {
+.PostingHeaderArrowLeft {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-.ChattingHeaderTitle {
+.PostingHeaderTitle {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -30,27 +30,15 @@
   font-family: NotoSansKRBold;
   font-size: 16px;
   font-weight: bold;
+  margin-right: 60px;
 }
 
-.ChattingHeaderNumOfPeople {
-  width: 60px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ChattingHeaderNumOfPeopleIcon {
-  width: 20px;
-  height: 20px;
-}
-
-.ChattingContainer {
-  height: calc(100vh - 100px);
+.PostingContainer {
+  height: calc(100vh - 50px);
   overflow: auto;
 }
 
-.ChattingInput {
+.PostingInput {
   height: 50px;
   display: flex;
   justify-content: center;
@@ -58,7 +46,7 @@
   border: none;
 }
 
-.ChattingExitIcon {
+.PostingExitIcon {
   width: 22px;
   height: 20px;
   padding: 15px;
@@ -66,14 +54,14 @@
   rotate: 180deg;
 }
 
-.ChattingInputContainer {
+.PostingInputContainer {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.ChattingInputBox {
+.PostingInputBox {
   flex: 1;
   width: 250px;
   height: 30px;
@@ -83,7 +71,7 @@
   font-size: 14px;
 }
 
-.ChattingSendButton {
+.PostingSendButton {
   width: 35px;
   height: 35px;
   display: flex;
@@ -95,15 +83,15 @@
   margin-bottom: 2px;
 }
 
-.ChattingSendIcon {
+.PostingSendIcon {
   color: white;
 }
 
-.ChattingMessage {
+.PostingMessage {
   display: flex;
 }
 
-.ChattingProfile {
+.PostingProfile {
   width: 40px;
   height: 40px;
   margin: 10px;
@@ -111,18 +99,18 @@
   background-color: #eeeeee;
 }
 
-.ChattingContent {
+.PostingContent {
   flex: 1;
   padding-right: 30px;
 }
 
-.ChattingContentName {
+.PostingContentName {
   font-family: NotoSansKRBold;
   font-size: 12px;
   font-weight: bold;
 }
 
-.ChattingContentText {
+.PostingContentText {
   font-family: NotoSansKRRegular;
   border-radius: 10px;
   border: 1px solid #cccccc;
@@ -131,18 +119,18 @@
   margin-bottom: 2px;
 }
 
-.ChattingContentTime {
+.PostingContentTime {
   text-align: right;
   font-size: 12px;
 }
 
-/* Path: src\style\ChattingStyle.module.css */
+/* Path: src\style\PostingStyle.module.css */
 
-.ChattingMessageSend {
+.PostingMessageSend {
   display: flex;
 }
 
-.ChattingProfileSend {
+.PostingProfileSend {
   width: 40px;
   height: 40px;
   margin: 10px;
@@ -150,19 +138,19 @@
   background-color: #ff92ae;
 }
 
-.ChattingContentSend {
+.PostingContentSend {
   flex: 1;
   padding-left: 30px;
 }
 
-.ChattingContentSendName {
+.PostingContentSendName {
   text-align: right;
   font-family: NotoSansKRBold;
   font-size: 12px;
   font-weight: bold;
 }
 
-.ChattingContentSendText {
+.PostingContentSendText {
   font-family: NotoSansKRRegular;
   border-radius: 10px;
   border: 1px solid #cccccc;
@@ -172,6 +160,66 @@
   margin-bottom: 2px;
 }
 
-.ChattingContentSendTime {
+.PostingContentSendTime {
   font-size: 12px;
+}
+
+/* PostingContainer */
+
+.PostingProp {
+  display: flex;
+  margin: 0 0 0 18px;
+  flex-direction: column;
+}
+
+.PostingPropTitle {
+  flex-grow: 0;
+  margin: 21px 1px 0 0;
+  font-family: NotoSansKR;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.PostingPropDetail {
+  height: 17px;
+  flex-grow: 0;
+  margin: 2px 0 5px 0;
+  font-family: NotoSansKR;
+  font-size: 10px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5b5b5b;
+}
+
+.PostingPropInput {
+  width: 300px;
+}
+
+.PostingButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.PostingButton {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 340px;
+  height: 50px;
+  margin: 80px 0 0 0;
+  border-radius: 13px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25),
+    inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  font-weight: bold;
 }

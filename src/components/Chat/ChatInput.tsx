@@ -1,8 +1,37 @@
 import * as React from "react";
 import styles from "../../style/ChattingStyle.module.css";
-import { ArrowLeft, User, LogOut } from "react-feather";
+import { ArrowLeft, ArrowUp, User, LogOut } from "react-feather";
+import { IChatMessage } from "pages/chatting";
+import { format } from "date-fns";
 
-export function ChatInput() {
+interface IChatInputProps {
+  setItems: React.Dispatch<React.SetStateAction<IChatMessage[]>>;
+}
+
+export function ChatInput({ setItems }: IChatInputProps) {
+  const [value, setValue] = React.useState("");
+  const handleChangeText = React.useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    },
+    []
+  );
+
+  const handleClick = () => {
+    setValue("");
+    setItems((prev) => {
+      return [
+        ...prev,
+        {
+          type: "send",
+          name: "붐바음악|음악학과21",
+          text: value,
+          time: format(new Date(), "HH'시' mm'분'"),
+        },
+      ];
+    });
+  };
+
   return (
     <div className={styles.ChattingInput}>
       <div className={styles.ChattingExit}>
@@ -10,9 +39,16 @@ export function ChatInput() {
       </div>
       <div className={styles.ChattingInputContainer}>
         <div className={styles.ChattingInputContainerInput}>
-          <input type="text" />
+          <input
+            className={styles.ChattingInputBox}
+            type="text"
+            onChange={handleChangeText}
+            value={value}
+          />
         </div>
-        <div className={styles.ChattingInputContainerButton}>전송</div>
+        <div className={styles.ChattingSendButton} onClick={handleClick}>
+          <ArrowUp className={styles.ChattingSendIcon} />
+        </div>
       </div>
     </div>
   );

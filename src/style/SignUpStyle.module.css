@@ -1,13 +1,13 @@
-.ChattingWrapper {
+.SignUpWrapper {
   height: 100vh;
 }
 
-.ChattingHeader {
+.SignUpHeader {
   height: 50px;
   display: flex;
 }
 
-.ChattingHeaderBack {
+.SignUpHeaderBack {
   width: 60px;
   height: 50px;
   display: flex;
@@ -16,41 +16,29 @@
   color: #ff366a;
 }
 
-.ChattingHeaderArrowLeft {
+.SignUpHeaderArrowLeft {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-.ChattingHeaderTitle {
+.SignUpHeaderTitle {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: NotoSansKRBold;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
+  margin-right: 60px;
 }
 
-.ChattingHeaderNumOfPeople {
-  width: 60px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ChattingHeaderNumOfPeopleIcon {
-  width: 20px;
-  height: 20px;
-}
-
-.ChattingContainer {
-  height: calc(100vh - 100px);
+.SignUpContainer {
+  height: calc(100vh - 50px);
   overflow: auto;
 }
 
-.ChattingInput {
+.SignUpInput {
   height: 50px;
   display: flex;
   justify-content: center;
@@ -58,7 +46,7 @@
   border: none;
 }
 
-.ChattingExitIcon {
+.SignUpExitIcon {
   width: 22px;
   height: 20px;
   padding: 15px;
@@ -66,14 +54,14 @@
   rotate: 180deg;
 }
 
-.ChattingInputContainer {
+.SignUpInputContainer {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.ChattingInputBox {
+.SignUpInputBox {
   flex: 1;
   width: 250px;
   height: 30px;
@@ -83,7 +71,7 @@
   font-size: 14px;
 }
 
-.ChattingSendButton {
+.SignUpSendButton {
   width: 35px;
   height: 35px;
   display: flex;
@@ -95,15 +83,15 @@
   margin-bottom: 2px;
 }
 
-.ChattingSendIcon {
+.SignUpSendIcon {
   color: white;
 }
 
-.ChattingMessage {
+.SignUpMessage {
   display: flex;
 }
 
-.ChattingProfile {
+.SignUpProfile {
   width: 40px;
   height: 40px;
   margin: 10px;
@@ -111,18 +99,18 @@
   background-color: #eeeeee;
 }
 
-.ChattingContent {
+.SignUpContent {
   flex: 1;
   padding-right: 30px;
 }
 
-.ChattingContentName {
+.SignUpContentName {
   font-family: NotoSansKRBold;
   font-size: 12px;
   font-weight: bold;
 }
 
-.ChattingContentText {
+.SignUpContentText {
   font-family: NotoSansKRRegular;
   border-radius: 10px;
   border: 1px solid #cccccc;
@@ -131,47 +119,67 @@
   margin-bottom: 2px;
 }
 
-.ChattingContentTime {
+.SignUpContentTime {
   text-align: right;
   font-size: 12px;
 }
 
-/* Path: src\style\ChattingStyle.module.css */
+/* SignUpContainer */
 
-.ChattingMessageSend {
+.SignUpProp {
   display: flex;
+  margin: 20px 0 0 18px;
+  flex-direction: column;
 }
 
-.ChattingProfileSend {
-  width: 40px;
-  height: 40px;
-  margin: 10px;
-  border-radius: 50%;
-  background-color: #ff92ae;
-}
-
-.ChattingContentSend {
-  flex: 1;
-  padding-left: 30px;
-}
-
-.ChattingContentSendName {
-  text-align: right;
-  font-family: NotoSansKRBold;
-  font-size: 12px;
+.SignUpPropTitle {
+  flex-grow: 0;
+  margin: 20px 1px 0 0;
+  font-family: NotoSansKR;
+  font-size: 16px;
   font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
 }
 
-.ChattingContentSendText {
-  font-family: NotoSansKRRegular;
-  border-radius: 10px;
-  border: 1px solid #cccccc;
-  background-color: #ffebf0;
-  padding: 5px;
-  margin-top: 3px;
-  margin-bottom: 2px;
-}
-
-.ChattingContentSendTime {
+.SignUpPropDetail {
+  height: 17px;
+  flex-grow: 0;
+  margin: 2px 0 5px 0;
+  font-family: NotoSansKR;
   font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5b5b5b;
+}
+
+.SignUpPropInput {
+  width: 300px;
+}
+
+.SignUpButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.SignUpButton {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 340px;
+  height: 50px;
+  margin: 380px 0 0 0;
+  border-radius: 13px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25),
+    inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  font-weight: bold;
 }

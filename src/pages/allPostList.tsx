@@ -15,6 +15,7 @@ import PostFilterBar, {filterValue} from "../components/PostList/postFilterBar";
 import FilteringPost from "../data/filteringPost";
 import {GetPostListData, jsontoForm} from "../data/api";
 import EndTime from "../data/endTime";
+import axios from "axios";
 
 // let postdata = GetPost().postData;
 // let postList:ListProps = {
@@ -61,3 +62,4 @@ export function AllPostList(){
 }
 
 export default AllPostList;
+
