@@ -2,7 +2,7 @@ import * as React from "react";
 import {getPost, posting} from "./api";
 import {Component, useEffect, useState} from "react";
 import axios from "axios";
-import {PostForm} from "../components/postList";
+import {PostForm} from "../components/PostList/postList";
 
 
 export interface user{
@@ -15,7 +15,6 @@ export interface user{
 export function Noshow(){
     let userEx:user = {
         email: "abc1234@ewhain.net", id: 4, isBlocked: false, nickname: "붐바음악"
-
     }
     const [noshow, setNoshow] =useState("initial value");
     const test = () => setNoshow(JSON.stringify("noshow report submit"));
@@ -23,7 +22,7 @@ export function Noshow(){
         const noshowapi = async() => {
             console.log("useEffect");
             try{
-                const response = await axios.put("http://localhost:8080/user/noshow", userEx.email);
+                const response = await axios.put("http://3.36.207.252:8080/user/noshow", userEx.email);
                 console.log(response)
             } catch (e) {
                 console.log("api connect error")

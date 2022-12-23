@@ -1,10 +1,10 @@
 import * as React from "react";
 import {Component, useState} from "react";
 import {connect} from "react-redux";
-import PostList, {GetPostListData, ListProps, PostForm} from "../components/postList";
+import PostList, {ListProps, PostForm} from "../components/PostList/postList";
 
 import {postListTest} from "../data/testdata";
-import PostFilterBar from "../components/postFilterBar";
+import PostFilterBar from "../components/PostList/postFilterBar";
 import FilteringPost from "../data/filteringPost";
 
 // let postListEx:ListProps;

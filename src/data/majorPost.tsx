@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ListProps, PostForm} from "../components/postList";
+import {ListProps, PostForm} from "../components/PostList/postList";
 
 
 export function MajorPost(postList:ListProps){
@@ -7,7 +7,7 @@ export function MajorPost(postList:ListProps){
     let majorposts:PostForm[] = [];
 
     for(let post of majorList.posts){
-        if(post["writerMajor" as keyof typeof post].toString().includes(majorList.major)){
+        if(post["major" as keyof typeof post].toString().includes(majorList.major)){
             majorposts.push(post);
         }
     }
@@ -16,7 +16,6 @@ export function MajorPost(postList:ListProps){
         userid:majorList.userid,
         posts:majorposts
     }
-    console.log("결과",result)
 
     return(result);
 }

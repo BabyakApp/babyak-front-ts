@@ -2,7 +2,7 @@ import * as React from "react";
 import {getPost, posting} from "./api";
 import {Component, useEffect, useState} from "react";
 import axios from "axios";
-import {ListProps, PostForm} from "../components/postList";
+import {ListProps, PostForm} from "../components/PostList/postList";
 
 
 
@@ -10,7 +10,7 @@ async function GetPostData(){
     const [loading, setLoading] = useState(false);
     setLoading(true);
     try {
-        let response = await axios.get("http://localhost:8080/AllList")
+        let response = await axios.get("http://3.36.207.252:8080/post/all")
             .then((res) => {
                 console.log("api response:", res.data)
                 setLoading(false);

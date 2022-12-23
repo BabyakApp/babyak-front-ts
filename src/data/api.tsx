@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios, {AxiosInstance, AxiosResponse} from "axios";
+import {ListProps, PostForm} from "../components/PostList/postList";
 
 export interface Post{
     chatTitle:string,
@@ -42,6 +43,29 @@ export async function posting(){
     return response.data;
 }
 
+export function jsontoForm(jsonfile:Array<any>){
+    let posts:PostForm[] = JSON.parse(JSON.stringify(jsonfile));
+    let dataList:ListProps = {
+        userid:9,
+        major: "융콘",
+        posts: posts
+    }
+    console.log(posts)
+    return dataList;
+}
+
+export async function GetPostListData(){
+    try {
+        let response = await axios.get("http://3.36.207.252:8080/post/all")
+            .then((res) => {
+                return res.data;
+            })
+            .catch(err => console.log(err))
+        return response;
+    } catch (e) {
+        console.log("api error")
+    }
+}
 
 
 

@@ -1,11 +1,11 @@
 import * as React from "react";
-import styles from "../style/StyleSetting.module.css";
+import styles from "../../style/StyleSetting.module.css";
 
 export function Info(){
     return<div>
-        <div className={styles.InfoTitle}>
-            <img src= "img/infomation.svg"/>
-            <span className={styles.InfoTitle}>이용안내</span>
+        <div style={{marginLeft:"7%"}}>
+            <img style={{float:"left"}} src= "img/infomation.svg"/>
+            <div className={styles.InfoTitle}>이용안내</div>
         </div>
         <div className={styles.Info}>
             <div>밥약에 참여를 원하시면 하단에 있는 참여하기 버튼을 눌러 참여해주세요.</div>

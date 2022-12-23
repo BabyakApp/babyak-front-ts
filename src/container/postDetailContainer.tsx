@@ -3,14 +3,11 @@ import {Component} from "react";
 import PostDetail from "../pages/postDetail";
 import {postListTest} from "../data/testdata";
 import {connect} from "react-redux";
+import {useLocation} from "react-router-dom";
 
-export class PostDetailContainer extends Component{
+export function PostDetailContainer(){
+    const location = useLocation();
+    const detailPost = location.state?.post;
+    return(<PostDetail post={detailPost} key={1} />);
 
-    render(){
-        return(<PostDetail post={postListTest.posts[1]} key={1} />);
-    }
 }
-export default connect(
-    null,
-    dispatch => ({})
-)(PostDetailContainer);
